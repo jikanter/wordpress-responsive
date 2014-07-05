@@ -18,5 +18,6 @@ define('WP_USE_THEMES', true);
 require('./wp-blog-header.php');
 
 //this file is looking WONDERFUL
+// I love it.
 
 ?>
