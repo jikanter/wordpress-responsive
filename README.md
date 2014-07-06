@@ -1,7 +1,7 @@
-wordpress-responsive
-====================
+Boomshaka - Wordpress Theme
+===========================
 
-Responsive wordpress template
+Boomshaka template
 
 Authors: Jordan Kanter 
 Dan Schreck
