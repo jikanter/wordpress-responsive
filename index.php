@@ -1,23 +1,17 @@
-<?php
-
-/**
+<?php /**
  * Front to the WordPress application. This file doesn't do anything, but loads
  * wp-blog-header.php which does and tells WordPress to load the theme.
  *
  * @package WordPress
  */
-
-/**
- * Tells WordPress to load the WordPress theme and output it.
- *
- * @var bool
- */
-define('WP_USE_THEMES', true);
-
-/** Loads the WordPress Environment and Template */
-require('./wp-blog-header.php');
-
-//this file is looking WONDERFUL
-// I love it.
-
-?>
+/* basic template index.php from http://wordpress.org/themes/blankslate, with a tiny customization */ ?>
+<?php get_header(); ?>
+<section id="content" role="main" class="boomshaka">
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php get_template_part( 'entry' ); ?>
+<?php comments_template(); ?>
+<?php endwhile; endif; ?>
+<?php get_template_part( 'nav', 'below' ); ?>
+</section>
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
