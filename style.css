@@ -1,51 +1,14 @@
-<<<<<<< HEAD
 /*
-Theme Name: BlankSlate
-Theme URI: http://wordpress.org/themes/blankslate
-Author: TidyThemes
-Author URI: http://tidythemes.com/
+Theme Name: Boomshaka
+Theme URI: ?
+Author: Jordan Kanter and Dan Schreck
+Author URI: ?
 Description: <strong>UPDATE</strong> - 4.0+ is here, completely overhauled, yet again. As always, <a href="http://tidythemes.com/concept/#upgrading">use caution when upgrading</a> (tidythemes.com/concept/#upgrading) and <a href="http://tidythemes.com/concept/">learn the TidyThemes concept</a> (tidythemes.com/concept). &nbsp; &rarr; <em><strong>CAUTION</strong>: If you're child theming or have clients that are child theming on top of BlankSlate (not the recommended use), please do not blindly upgrade to newer versions.</em> &nbsp; &rarr; <strong>DESCRIPTION</strong>: BlankSlate is the definitive WordPress HTML5 boilerplate starter theme. We've carefully constructed the most clean and minimalist theme available anywhere for designers/developers to use as a base/foundation to build websites for clients or to build completely custom themes from scratch to release faster. Clean, semi-minified, unformatted and valid code, SEO-friendly, no programmer comments, standardized and as white label as possible and most importantly, CSS reset for cross-browser-compatability and no intrusive visual CSS styles added whatsoever. A perfect skeleton theme that blows any others like it (the subsequent underscores.me for example) completely out of the water, as they're simply too overcomplicated for what people really want in this kind of theme. Now comes with jQuery enqueued and ready to go. &nbsp; &rarr; <strong>SUPPORT</strong>: Please use the <a href="http://tidythemes.com/forum/">official support forum</a> (tidythemes.com/forum). Comments and suggestions for improving BlankSlate, please see "<a href="http://tidythemes.com/tidythemes-sucks/">TidyThemes Sucks!</a>" (tidythemes.com/tidythemes-sucks). Just getting started? <a href="http://tidythemes.com/want-to-learn-css/">Want to learn CSS?</a> (tidythemes.com/want-to-learn-css) &nbsp; &rarr; <strong>WHAT'S NEW?</strong>: We stripped down as much custom, extraneous, superfluous junk code as we could and greatly improved the HTML5 structure. <a href="http://make.wordpress.org/themes/author/chipbennett/">Chip Bennett</a> (make.wordpress.org/themes/author/chipbennett), a highly experienced programmer and official WordPress administrator, worked closely with us to audit the theme code for quality. <a href="http://themes.trac.wordpress.org/changeset?old_path=/blankslate/3.3&new_path=/blankslate/4.0">See</a> (themes.trac.wordpress.org/changeset?old_path=/blankslate/3.3&new_path=/blankslate/4.0) just how much we've revamped things. Last, but not least, BlankSlate has now been <a href="https://github.com/tidythemes/blankslate">opened up on GitHub</a> (github.com/tidythemes/blankslate) if anyone would like to make suggested code additions/improvements. Thank you for using BlankSlate.
 Version: 4.0.2
 License: GNU General Public License
 License URI: https://www.gnu.org/licenses/gpl.html
 Tags: black, blue, white, light, one-column, fluid-layout, responsive-layout, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
 Text Domain: blankslate
-=======
-/* 
- * Theme Name: Boomshaka
- * Theme URI: #
- * Author: Dan Schreck, Jordan Kanter
- * Author URI: #
- * Description: A flexible, responsive theme for artists
- * License: Proprietary
- * License URI: #
- * Tags: responsive
- * Text Domain: Boomshaka
- */
-
-/* basic responsive design settings for devices 
- * from http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
- */
-
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and 
-(min-device-width : 320px) 
-and (max-device-width : 480px) {
-/* Styles */
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 321px) {
-/* Styles */
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
-/* Styles */
-}
->>>>>>> 71fd968cd56e115081d887e419fdf0e470712306
 
 BlankSlate WordPress Theme © 2011-2014 TidyThemes
 BlankSlate is distributed under the terms of the GNU GPL
@@ -59,235 +22,74 @@ BlankSlate is distributed under the terms of the GNU GPL
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{font-size:100%;font:inherit;padding:0;border:0;margin:0;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}.clear{clear:both}
 .sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{}
 
-
-
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
-audio, canvas, video {
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
-}
-audio:not([controls]) { display: none; }
-[hidden] { display: none; }
-figure { margin: 0; }
-html {
-	font-size: 1em;	/* 16px */
+/**
+ * 2.0 Boomshaka styles go below here / Modded from "Hatch" theme
+ */
+ 
+ html {
+	font-size: 1em;
 	overflow-y: scroll;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
-body {
+
+ body {
 	margin: 0;
-	font: 0.75em/1.75em 'Helvetica Neue', Helvetica, Arial, sans-serif;	/* 12 / 16 = 0.75;  21 / 12 = 1.75 */
-	color: #444;
+	font: 0.75em/1.75em 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #555;
 	background: #fff;
 	padding: 0;
 }
-::-moz-selection {
-	background: #000;
-	color: #fff;
-	text-shadow: none;
-}
-::selection {
-	background: #000;
-	color: #fff;
-	text-shadow: none;
-}
+
 a, a:visited {
-	color: #0da4d3;
+	color: magenta;
 	text-decoration: none;
 }
 a:hover {
 	text-decoration: none;
-	color: #000;
-	border-bottom: 1px solid #0da4d3;
+	color: blue;
 }
 a:focus { outline: none; }
 a:hover, a:active { outline: 0; }
-abbr { cursor: help }
-abbr[title] { border-bottom: 1px dotted; }
-acronym {
-	font-size: .85em;
-	text-transform: uppercase;
-	color: #666;
-	border-bottom: 1px dotted #eee;
-	cursor: help;
+
+/* Header 
+-------------------------------------------------------------- */
+#header {
+	clear: both;
+	float: left;
+	width: 100%;
+	margin: 20px 0 20px 0; // change
 }
-acronym:hover {
-	color: #333;
-	background: #f3f3f3;
-	border-bottom: 1px dotted #aaa;
+/**
+#branding {
+	float: left;
+	width: 35%;
+	overflow: hidden;
 }
-small { font-size: 0.9166666666666667em; }	/* 12 / 13 = 0.9166666666666667 */
-big { font-size: 15px; }
-p { margin: 0 0 1.75em 0 }
-b, strong { font-weight: bold; }
-blockquote {
-	margin: 0 1.75em;
-	font-style: normal
-}
-blockquote em, blockquote cite { font-style: italic }
-blockquote, q { quotes: none }
-blockquote:before, blockquote:after, q:before, q:after {
-	content: '';
-	content: none
-}
-em, cite { font-style: italic; }
-em em, cite cite { font-style: normal }
-dfn { font-style: italic; }
-address {
-	font-style: italic;
-	margin: 0 0 1.75em 0
-}
-li address, dd address { margin:0 }
-del { text-decoration: line-through }
-embed, object, video { margin-bottom: 1.75em }
-hr {
-	display: block;
-	height: 1px;
-	border: 0;
-	border-top: 1px solid #ccc;
-	margin: 1em 0 1.75em 0;
-	padding: 0;
-}
-ins {
-	background: #f3f3f3;
-	color: #000;
-	text-decoration: none;
-	font-style: italic;
-}
-mark {
-	background: #f3f3f3;
-	color: #000;
-	font-style: italic;
+ */
+#site-title {
+	font-size: 3em;
+	line-height: 1em;
 	font-weight: bold;
-}
-pre, code, kbd, samp {
-	font-family: monospace, monospace;
-	_font-family: 'courier new', monospace;
-	font-size: 1em;
-}
-pre code { font-size: 1em }
-pre {
-	font-size: 0.9166666666666667em;
-	font-family: Monaco, monospace, Courier, "Courier New";
-	overflow: auto;
-	line-height: 1.75em;
-	margin-bottom: 1.75em;
-	padding: 10px;
-	white-space: pre;
-	white-space: pre-wrap;
+	margin: 0 0 5px 0;
 	word-wrap: break-word;
 }
-code {
-	font-size: 0.9166666666666667em;
-	font-family: Monaco, monospace, Courier, "Courier New";
+#site-title a {
+	color: #222;
+	border-bottom: none;
 }
-sub, sup {
-	font-size: 0.8333333333333333em;	/* 10 / 12 = 0.8333333333333333 */
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
-ul {
-	list-style: circle;
-	margin: 0 0 1.75em 2.8em;
-	padding: 0;
-}
-ol {
-	list-style-type: decimal;
-	margin: 0 0 1.75em 3.1em;
-	padding: 0;
-}
-ol ol { list-style: upper-roman }
-ol ol ol { list-style: lower-roman }
-ol ol ol ol { list-style: upper-alpha }
-ol ol ol ol ol { list-style: lower-alpha }
-ul ul, ol ol, ul ol, ol ul { margin-bottom:0 }
-dl { margin: 0 0 1.75em 5px }
-dt {
-	font-weight: bold;
-	margin: 10px 0 0 0
-}
-dd { margin: 5px 0 0 1.5em }
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Abel', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-style: normal;
+#header img { max-width: 100%; }
+/**
+#site-description {
+	font-size: 1.333333333333333em;
 	font-weight: normal;
-	margin: 0 0 15px 0;
-	color: #333;
-	line-height: 1.3em;
-}
-h1 { font-size: 3em; }	/* 36 / 12 = 3 */
-h2 { font-size: 2em; }	/* 24 / 12 = 2 */
-h3 { font-size: 1.666666666666667em; }	/* 20 / 12 = 1.666666666666667 */
-h4 { font-size: 1.5em; }	/* 18 / 12 = 1.5 */
-h5 { font-size: 1.333333333333333em;	/* 16 / 12 = 1.333333333333333 */ }
-h6 {
-	font-size: 1.166666666666667em;	/* 14 / 12 = 1.166666666666667 */
-	text-transform: uppercase;
-	font-weight: normal;
-}
-img {
-	border: 0;
-	-ms-interpolation-mode: bicubic;
-	vertical-align: middle;
-}
-svg:not(:root) { overflow: hidden; }
-form { margin: 0; }
-fieldset {
-	border: 0;
+	line-height: 1.5em;
 	margin: 0;
-	padding: 0;
+	color: #aaa;
+	text-transform: none;
+	float: left;
+	width: 91.48936170212766%;
+	clear: both;
 }
-label { cursor: pointer; }
-legend {
-	border: 0;
-	*margin-left: -7px;
-	padding: 0;
-}
-button, input, select, textarea, a.button {
-	font-size: 1em;
-	margin: 0;
-	vertical-align: baseline;
-	*vertical-align: middle;
-}
-button, input, a.button {
-	line-height: normal;
-	*overflow: visible;
-}
-table button, table input { *overflow: auto; }
-button, input[type="button"], input[type="reset"], input[type="submit"] {
-	cursor: pointer;
-	-webkit-appearance: button;
-}
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
-input[type="search"] {
-	-webkit-appearance: textfield;
-	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box;
-	box-sizing: content-box;
-}
-input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
-button::-moz-focus-inner, input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
-textarea {
-	overflow: auto;
-	vertical-align: top;
-	resize: vertical;
-}
-input:valid, textarea:valid {}
-input:invalid, textarea:invalid { background-color: #f0dddd; }
-option { padding: 1px 2px; }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	margin-bottom: 1.75em;
-}
-td { vertical-align: top; }
-th, td { text-align: left; }
+ */
 
