@@ -6,7 +6,6 @@
 			while ( have_posts() ) : 
 				the_post(); 
 	?>
-		  <?php get_template_part( 'entry' ); ?>
 <?php 		
 			endwhile; 
 			the_content();
