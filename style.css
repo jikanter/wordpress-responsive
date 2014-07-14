@@ -77,6 +77,18 @@ a:hover, a:active { outline: 0; }
 	border-bottom: none;
 }
 #header img { max-width: 100%; }
+
+#menu ul {margin: 0; padding: 0 0 10px 0; 
+	list-style-type: none; list-style-image: none; }
+#menu li {display: inline; }
+#menu ul li a {text-decoration:none;
+	padding: .25em .5em 0 0; color: black;
+	font-size: 1.5em;
+	}
+#menu ul li a:hover {color: red;}
+
+h1 {font-weight: bold;}
+
 /**
 #site-description {
 	font-size: 1.333333333333333em;
