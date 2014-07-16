@@ -31,7 +31,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	-ms-text-size-adjust: 100%;
 }
 
- body {
+body {
 	margin: 0;
 	font: 0.75em/1.75em 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #555;
@@ -50,8 +50,7 @@ a:hover {
 a:focus { outline: none; }
 a:hover, a:active { outline: 0; }
 
-/* Header 
--------------------------------------------------------------- */
+/* Header -------------------------------------------------------------- */
 #header {
 	clear: both;
 	float: left;
