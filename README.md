@@ -1,7 +1,4 @@
-Boomshaka - Wordpress Theme
-===========================
+Boomshaka
+=========
 
-Boomshaka template
-
-Authors: Jordan Kanter 
-Dan Schreck
+Authors: Jordan Kanter, Dan Schreck
