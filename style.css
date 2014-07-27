@@ -93,6 +93,9 @@ nav,
 section {
 	display: block;
 }
+header {
+	margin: 0 0 10px 0;
+}
 ol, ul {
 	list-style: none;
 }
@@ -130,18 +133,45 @@ button,
 input,
 select,
 textarea {
+	padding: 10px; 
 	color: #404040;
 	font-family: sans-serif;
 	font-size: 16px;
 	font-size: 1.6rem;
-	line-height: 1.5;
+	line-height: 1.5; //DS: recommended by W3C http://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-visual-presentation
 }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
+.site-branding h1 a {
+	font-size: 2.4em; // x3 of body text
+	line-height: 2.4em;
+	font-weight: bold;
+	word-wrap: break-word;
+	color: black;	
+	text-decoration: none;
+}
+.site-branding h1 a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.entry-header h1,
+.entry-header h1 a { 
+	font-weight: bold;
+	margin: 0 0 0 0;
+	word-wrap: break-word;
+	color: black;	
+	text-decoration: none;
+	
+}
 p {
 	margin-bottom: 1.5em;
+
 }
+//.entry-content p {
+//	max-width: 600px; //DS: This fucks up all the big imagges DAMNN
+//}	
 b, strong {
 	font-weight: bold;
 }
@@ -201,10 +231,11 @@ big {
 3.0 Elements
 --------------------------------------------------------------*/
 hr {
-	background-color: #ccc;
-	border: 0;
 	height: 1px;
-	margin-bottom: 1.5em;
+	margin: 20px 0 20px 0;
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
 }
 ul, ol {
 	margin: 0 0 1.5em 3em;
@@ -359,6 +390,18 @@ a:active {
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
+
+#menu ul {margin: 0; padding: 0 0 10px 0; 
+	list-style-type: none; list-style-image: none; }
+#menu li {display: inline; }
+#menu ul li a {text-decoration:none;
+	padding: .0 .8em 0 0; color: black;
+	font-size: 1.5em;
+	font-weight: 200;
+	}
+#menu ul li a:hover {color: red;}
+
+
 .main-navigation {
 	clear: both;
 	display: block;
@@ -367,8 +410,9 @@ a:active {
 }
 .main-navigation ul {
 	list-style: none;
+	list-style-image: none;
 	margin: 0;
-	padding-left: 0;
+	paddinging: 0 0 10px 0;
 }
 .main-navigation li {
 	float: left;
@@ -376,6 +420,10 @@ a:active {
 }
 .main-navigation a {
 	display: block;
+	padding: .0 .8em 0 0;
+	font-size: 1.25em;
+	font-weight: 200;
+	color: black;
 	text-decoration: none;
 }
 .main-navigation ul ul {
