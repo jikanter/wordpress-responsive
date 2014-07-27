@@ -101,6 +101,7 @@ function boomshaka_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	
 }
 add_action( 'wp_enqueue_scripts', 'boomshaka_scripts' );
 
@@ -173,13 +174,21 @@ function boomshaka_setup()
 	);
 }
 
+add_action( 'customize_register', 'boomshaka_create_custom_gallery_uploader');
+function boomshaka_create_custom_gallery_uploader($wp_customize) {
+	// set up our gallery uploader
+	$wp_customize->add_setting('custom_gallery_create', array(
+		'default' => 'background-image: url("/uploads/2014/07/gallery-initial-content.jpg")',
+		'transport' => 'refresh'
+	));
+	
+}
+
 add_action( 'customize_preview_init', 'boomshaka_load_customize_theme_scripts' );
 function boomshaka_load_customize_theme_scripts()
 {
 	// load our customization for global artist site changes
-	wp_enqueue_script( 'customize' , get_template_directory_uri() . '/customize.js', array('jquery', 'customize-preview'),
-					  '',  
-				  	  true );
+	wp_enqueue_script( 'customize' , get_template_directory_uri() . '/customize.js', array('jquery', 'customize-preview'), '', true );
 }
 
 add_filter( 'the_title', 'boomshaka_title' );
@@ -249,7 +258,7 @@ function boomshaka_artist_customization_init() {
 	$body_class .= ' boomshaka';
 	if (!$boomshaka_scripts_loaded) { 
 		// enqueue the customizer
-		wp_enqueue_script( 'customize' , get_template_directory_uri() . '/customize.js' );
+		
 	}
 }
 
