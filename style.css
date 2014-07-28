@@ -144,27 +144,39 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 .site-branding h1 a {
-	font-size: 2.4em; // x3 of body text
+	font-size: 3em; // x3 of body text
 	line-height: 2.4em;
 	font-weight: bold;
 	word-wrap: break-word;
 	color: black;	
 	text-decoration: none;
+	background-color: grey;	
 }
 .site-branding h1 a:hover {
 	text-decoration: none;
 	color: black;
 }
-
 .entry-header h1,
 .entry-header h1 a { 
+	display: inline;
 	font-weight: bold;
 	margin: 0 0 0 0;
+	padding: 0 0 0 0;
 	word-wrap: break-word;
 	color: black;	
 	text-decoration: none;
-	
+	background-color: grey;
 }
+
+//.entry-title { // Thought this would fix a weird spacing issue under header h1, it doesn't tho
+//	margin: 0;
+//	padding: 0;
+//}	 
+//.entry-meta {  
+//	margin: 0;
+//	padding: 0;
+//}	
+	
 p {
 	margin-bottom: 1.5em;
 
@@ -172,6 +184,7 @@ p {
 //.entry-content p {
 //	max-width: 600px; //DS: This fucks up all the big imagges DAMNN
 //}	
+
 b, strong {
 	font-weight: bold;
 }
@@ -391,16 +404,6 @@ a:active {
 5.2 Menus
 --------------------------------------------------------------*/
 
-#menu ul {margin: 0; padding: 0 0 10px 0; 
-	list-style-type: none; list-style-image: none; }
-#menu li {display: inline; }
-#menu ul li a {text-decoration:none;
-	padding: .0 .8em 0 0; color: black;
-	font-size: 1.5em;
-	font-weight: 200;
-	}
-#menu ul li a:hover {color: red;}
-
 
 .main-navigation {
 	clear: both;
@@ -421,11 +424,15 @@ a:active {
 .main-navigation a {
 	display: block;
 	padding: .0 .8em 0 0;
-	font-size: 1.25em;
+	font-size: 1em;
 	font-weight: 200;
 	color: black;
 	text-decoration: none;
 }
+.main-navigation a:hover {
+	background-color: yellow;
+}
+
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
@@ -459,18 +466,41 @@ a:active {
 .main-navigation .current-menu-item a {
 }
 /* Small menu */
+
 .menu-toggle {
 	display: none;
+	width: 100%;
+	height: 50px;
+	margin: 10px auto 15px auto;
+	font-size: 18px;
+	//line-height: 47px;
+	letter-spacing: 1px;
+	text-align: center;
+	//color: #eee;
+	//background: #111;
+	cursor: pointer;
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
 }
 @media screen and (max-width: 600px) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
 		display: block;
+		
 	}
 
 	.main-navigation ul {
 		display: none;
 	}
+
+	.main-navigation li {
+	display: block;
+	margin: 1px;
+	width: 100%;
+	//background-color: #E5E5E5;
+}
+
 }
 .site-main .comment-navigation,
 .site-main .paging-navigation,
