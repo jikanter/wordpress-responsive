@@ -4,6 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
+ * Note: changed "Primary Menu" to "Menu" for aesthetic purposes. hope this doesn't fuck it up
  * @package boomshaka
  */
 ?><!DOCTYPE html>
@@ -29,7 +30,7 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', 'boomshaka' ); ?></button>
+			<button class="menu-toggle"><?php _e( 'Menu', 'boomshaka' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
