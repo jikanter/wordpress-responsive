@@ -53,5 +53,6 @@
 		<?php endif; ?>
 
 		<?php edit_post_link( __( 'Edit', 'boomshaka' ), '<span class="edit-link">', '</span>' ); ?>
+	<hr/>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
