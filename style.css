@@ -211,6 +211,11 @@ pre {
 code, kbd, tt, var {
 	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
+//.comments-area,
+//.form-allowed-tags,
+//.form-allowed-tags code {
+//	font-size: 1em;	// this styles the allowed html message under the comment box
+//}
 abbr, acronym {
 	border-bottom: 1px dotted #666;
 	cursor: help;
@@ -389,7 +394,7 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: red;
 }
 a:visited {
 	color: purple;
@@ -397,13 +402,12 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: black;
 }
 
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
-
 
 .main-navigation {
 	clear: both;
@@ -420,18 +424,18 @@ a:active {
 .main-navigation li {
 	float: left;
 	position: relative;
+	padding: .0 .8em 0 0;	
 }
 .main-navigation a {
 	display: block;
-	padding: .0 .8em 0 0;
 	font-size: 1em;
 	font-weight: 200;
 	color: black;
 	text-decoration: none;
 }
-.main-navigation a:hover {
-	background-color: yellow;
-}
+//.main-navigation a:hover {
+//	background-color: yellow;
+//}
 
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
