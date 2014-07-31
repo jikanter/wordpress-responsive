@@ -94,7 +94,8 @@ section {
 	display: block;
 }
 header {
-	margin: 0 0 10px 0;
+//	margin: 0 0 1.5em 0; // this 1 line space between title and menu
+	background-color: red;
 }
 ol, ul {
 	list-style: none;
@@ -168,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
 	//background-color: grey;
 }
 
-//.entry-title { // Thought this would fix a weird spacing issue under header h1, it doesn't tho
+//.entry-title h1 { // Thought this would fix a weird spacing issue under header h1, it doesn't tho
 //	margin: 0;
 //	padding: 0;
 //}	 
@@ -242,6 +243,24 @@ small {
 }
 big {
 	font-size: 125%;
+}
+.entry-title,
+.entry-title h1,
+.entry-title h1 a {
+	display: inline-block;
+	background-color: orange;
+//	max-width: 50%;	
+}
+.entry-meta {
+//	max-width: 50%;
+	display: inline-block;
+	background-color: yellow;
+	margin: 0;
+	padding: 0;
+}
+.posted-on,
+.byline {
+//	font-size: 75%;
 }
 
 /*--------------------------------------------------------------
@@ -413,6 +432,7 @@ a:active {
 	display: block;
 	float: left;
 	width: 100%;
+	margin: 0 0 1.5em 0; // here is the spacing between the menu and the content
 }
 .main-navigation ul {
 	list-style: none;
@@ -426,15 +446,17 @@ a:active {
 	padding: .0 .8em 0 0;	
 }
 .main-navigation a {
-	display: block;
 	font-size: 1em;
 	font-weight: 200;
-	color: black;
+	color: #404040;
 	text-decoration: none;
 }
-//.main-navigation a:hover {
+.main-navigation a:hover {
+	color: black;
 //	background-color: yellow;
-//}
+//	text-decoration:underline;
+//	font-weight:bold;
+}
 
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -642,7 +664,7 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+//	margin: 5em 0 0 0;
 }
 .page-links {
 	clear: both;
