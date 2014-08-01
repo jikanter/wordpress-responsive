@@ -265,6 +265,10 @@ big {
 	margin: 0;
 	padding: 0;
 }
+
+
+	
+	
 .posted-on,
 .byline {
 //	font-size: 75%;
@@ -544,6 +548,7 @@ a:active {
 .post-navigation .nav-previous {
 	float: left;
 	width: 50%;
+	font-weight: 200;
 }
 .comment-navigation .nav-next,
 .paging-navigation .nav-next,
@@ -551,6 +556,12 @@ a:active {
 	float: right;
 	text-align: right;
 	width: 50%;
+	font-weight: 200;	
+}
+
+.nav-previous a,
+.nav-next a {
+	background-color: aquamarine;
 }
 
 /*--------------------------------------------------------------
