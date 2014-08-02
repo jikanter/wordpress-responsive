@@ -742,7 +742,7 @@ object {
 12.1 Captions
 --------------------------------------------------------------*/
 .wp-caption {
-	margin: 0;
+//	margin: 0;
 	font-size: 0.9em;
 	//line-height: 1.4em;
 	color: #aaa;
@@ -755,7 +755,10 @@ object {
 	text-align: center;
 }
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+	clear: both;
+	display: block;
+	margin: 0.8075em auto;	
+	text-transform: uppercase;	
 }
 
 
@@ -798,8 +801,5 @@ object {
 	max-width: 11.11%;
 }
 .gallery-caption {
-	margin: 0;
-	font-size: 0.9em;
-	//line-height: 1.4em;
-	color: #aaa;}
-
+	display: none; // getting rid of gallery captions for now.
+}
