@@ -745,11 +745,16 @@ object {
 //	margin: 0;
 	font-size: 0.9em;
 	//line-height: 1.4em;
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */	
 	color: #aaa;
+	background-color: purple;
 }
 .wp-caption img[class*="wp-image-"] {
 	display: block;
 	margin: 0 auto;
+//	max-width: 100%;
+	background-color: orange;
 }
 .wp-caption-text {
 	text-align: center;
@@ -758,7 +763,9 @@ object {
 	clear: both;
 	display: block;
 	margin: 0.8075em auto;	
+//	max-width: 100%;	
 	text-transform: uppercase;	
+	background-color: orange;	
 }
 
 
