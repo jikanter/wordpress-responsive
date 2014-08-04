@@ -744,15 +744,14 @@ object {
 .wp-caption {
 //	margin: 0;
 	font-size: 0.9em;
-	//line-height: 1.4em;
-	height: auto; /* Make sure images are scaled correctly. */
+	//height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */	
 	color: #aaa;
 	background-color: purple;
 }
 .wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin: 0 auto;
+//	display: block;
+//	margin: 0 auto;
 //	max-width: 100%;
 	background-color: orange;
 }
@@ -760,7 +759,7 @@ object {
 	text-align: center;
 }
 .wp-caption .wp-caption-text {
-	clear: both;
+//	clear: both;
 	display: block;
 	margin: 0.8075em auto;	
 //	max-width: 100%;	
