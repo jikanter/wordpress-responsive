@@ -689,17 +689,23 @@ a:active {
 	clear: both;
 	margin: 0 0 1.5em;
 }
-.hentry.type-piece {
-	display: inline-block;	
-}
+//.hentry.type-piece {
+//	display: inline-block;	
+//}
 //.hentry.type-piece .entry-content { wonky css to mess with piece archive page
 //	display: inline-block;	
 //}
+//
+//.entry.type-piece {
+//	display: inline;
+//}	
 
-.entry.type-piece {
-	display: inline;
-}	
-
+.type-piece {
+	display: inline-block;
+	margin: 0;
+	//padding: 400;
+	//height: 500px;
+}
 
 /*--------------------------------------------------------------
 10.2 Asides
