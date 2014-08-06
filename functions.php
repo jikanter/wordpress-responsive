@@ -19,6 +19,8 @@ if ( ! function_exists( 'boomshaka_setup' ) ) :
  * Note that this function is hooked into the after_setup_theme hook, which
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
+ *
+ * DS: ^ Does this apply to us?
  */
 function boomshaka_setup() {
 
@@ -341,7 +343,7 @@ function boomshaka_create_post_types() {
 						'show_in_menu' => true,
 						'show_in_menu_bar' => true,
 						'menu_position' => 1,
-						'supports' => array('title', 'editor', 'author',
+						'supports' => array('title', 'editor', 'author', 'thumbnail',
 						                    'exerpt', 'trackbacks', 'custom-fields',
 											'revisions', 'page-attributes', 'page-formats'),
 						'taxonomies' => array('category', 'post_tag', 'gallery'),
