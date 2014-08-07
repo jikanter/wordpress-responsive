@@ -140,11 +140,15 @@ textarea {
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5; //DS: recommended by W3C http://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-visual-presentation
-}
+}	
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
+//.site-branding, .site-title {
+//	display: inline-block;
+//}
 .site-branding h1 a {
+//	display: inline-block;	
 	font-size: 3em; // x3 of body text
 	line-height: 1.5;
 	font-weight: bold;
@@ -158,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: black;
 }
 entry-header {
-	backgroun-color: red;
+	background-color: red;
 }
 .entry-header h1,
 .entry-header h1 a { 
@@ -169,8 +173,14 @@ entry-header {
 	word-wrap: break-word;
 	color: #404040;	
 	text-decoration: none;
+	clear: none;
 	//background-color: grey;
 }
+
+//h2.boom-head {
+//	display: inline-block;
+//	clear: none;
+//}
 
 //.entry-title h1 { // Thought this would fix a weird spacing issue under header h1, it doesn't tho
 //	margin: 0;
@@ -185,6 +195,11 @@ p {
 	margin-bottom: 1.5em;
 	width: 75%;
 }
+p + ul,
+p + ol {
+    margin-top: -1.5em;
+}
+
 .singular-page p {
 	width: 100%;	
 }	
@@ -266,7 +281,38 @@ big {
 	padding: 0;
 }
 
-
+//.hfeed-site {
+//	min-height:100%;
+//   	position:relative;	
+//}
+//.site-header {
+//	background:#ff0;
+//	padding:10px;
+//}	
+//.content-area {
+//	padding:10px;
+//	padding-bottom:60px;   /* Height of the footer */
+//}
+.site-footer {
+	background-color:#6cf;	
+	color: white;
+	padding: 1em;
+}
+.site-info a, 
+.site-info a:focus,
+.site-info a:hover, 
+.site-info a:visited, 
+.site-info a:active {
+	color: yellow;
+}
+		
+//.site-footer {
+//	position:absolute;
+//	bottom:0;
+//	width:100%;
+//	height:60px;   /* Height of the footer */
+//	background:#6cf;	
+//}	
 	
 	
 .posted-on,
