@@ -12,7 +12,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'boomshaka' ), 'boomshaka', '<a href="http://github.com/jikanter/wordpress-responsive" rel="designer">Boomshaka Design</a>' ); ?>
+			<?php printf( __( 'WordPress x %1$s = %2$s.', 'boomshaka' ), 'boomshaka', '<a href="http://github.com/jikanter/wordpress-responsive" rel="designer">Boomshakalaka</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
