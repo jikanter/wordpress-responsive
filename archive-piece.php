@@ -87,8 +87,13 @@ get_header(); ?>
                 'class' => "archive-image",
                 //'alt' => trim( strip_tags( $wp_postmeta->_wp_attachment_image_alt ) ),
             ); ?>
-            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'thumbnail', $attr ); ?></a>
+            <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+			
+            <a href="<?php echo $url; ?>"><?php the_post_thumbnail( 'thumbnail', $attr ); ?></a>
             <!-- <h2 class="archive-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>-->
+            
+            
+
         </article>
         
               <?php endwhile; ?>
