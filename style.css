@@ -887,3 +887,34 @@ object {
 .gallery-caption {
 	display: none; // getting rid of gallery captions for now.
 }
+
+/*--------------------------------------------------------------
+13 Side Bar
+--------------------------------------------------------------*/
+#primary {
+	float: left;
+	background-color: brown;
+	width: 80%;	
+}
+#secondary {
+//	display: inline-block;	
+	float: right;
+	background-color: yellow;
+	width: 20%;
+}
+#secondary ul,
+#secondary li {
+//	padding-left:0;
+	list-style: none;
+	margin-left: 0;
+}
+
+@media screen and (max-width: 600px) {
+	#primary {
+		width: 100%;
+	}
+	#secondary {
+		display: none;
+	}
+}
+
