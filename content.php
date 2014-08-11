@@ -33,7 +33,7 @@
 				if ( $categories_list && boomshaka_categorized_blog() ) :
 			?>
 			<span class="cat-links">
-				<?php printf( __( 'Posted in %1$s', 'boomshaka' ), $categories_list ); ?>
+				<?php printf( __( 'Posted in %1$s.', 'boomshaka' ), $categories_list ); ?>
 			</span>
 			<?php endif; // End if categories ?>
 
@@ -43,7 +43,7 @@
 				if ( $tags_list ) :
 			?>
 			<span class="tags-links">
-				<?php printf( __( 'Tagged %1$s', 'boomshaka' ), $tags_list ); ?>
+				<?php printf( __( 'Tags: %1$s', 'boomshaka' ), $tags_list ); ?>
 			</span>
 			<?php endif; // End if $tags_list ?>
 		<?php endif; // End if 'post' == get_post_type() ?>

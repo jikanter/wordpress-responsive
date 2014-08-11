@@ -140,11 +140,15 @@ textarea {
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5; //DS: recommended by W3C http://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-visual-presentation
-}
+}	
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
+//.site-branding, .site-title {
+//	display: inline-block;
+//}
 .site-branding h1 a {
+//	display: inline-block;	
 	font-size: 3em; // x3 of body text
 	line-height: 1.5;
 	font-weight: bold;
@@ -158,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: black;
 }
 entry-header {
-	backgroun-color: red;
+	background-color: red;
 }
 .entry-header h1,
 .entry-header h1 a { 
@@ -169,8 +173,14 @@ entry-header {
 	word-wrap: break-word;
 	color: #404040;	
 	text-decoration: none;
+	clear: none;
 	//background-color: grey;
 }
+
+//h2.boom-head {
+//	display: inline-block;
+//	clear: none;
+//}
 
 //.entry-title h1 { // Thought this would fix a weird spacing issue under header h1, it doesn't tho
 //	margin: 0;
@@ -185,6 +195,11 @@ p {
 	margin-bottom: 1.5em;
 	width: 75%;
 }
+p + ul,
+p + ol {
+    margin-top: -1.5em;
+}
+
 .singular-page p {
 	width: 100%;	
 }	
@@ -266,7 +281,38 @@ big {
 	padding: 0;
 }
 
-
+//.hfeed-site {
+//	min-height:100%;
+//   	position:relative;	
+//}
+//.site-header {
+//	background:#ff0;
+//	padding:10px;
+//}	
+//.content-area {
+//	padding:10px;
+//	padding-bottom:60px;   /* Height of the footer */
+//}
+.site-footer {
+	background-color:#6cf;	
+	color: white;
+	padding: 1em;
+}
+.site-info a, 
+.site-info a:focus,
+.site-info a:hover, 
+.site-info a:visited, 
+.site-info a:active {
+	color: yellow;
+}
+		
+//.site-footer {
+//	position:absolute;
+//	bottom:0;
+//	width:100%;
+//	height:60px;   /* Height of the footer */
+//	background:#6cf;	
+//}	
 	
 	
 .posted-on,
@@ -450,7 +496,7 @@ a:active {
 	list-style: none;
 	list-style-image: none;
 	margin: 0;
-	paddinging: 0 0 10px 0;
+	padding: 0 0 10px 0;
 }
 .main-navigation li {
 	float: left;
@@ -469,6 +515,8 @@ a:active {
 //	text-decoration:underline;
 //	font-weight:bold;
 }
+
+
 
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -536,6 +584,17 @@ a:active {
 	width: 100%;
 	//background-color: #E5E5E5;
 	}
+	
+//	.post-type-archive .type-piece {
+//	display: block;
+//	width: 100%;
+//	height: auto;
+//	}
+//	img[class*="archive-image"] {
+//	display: block;
+//	width: 100%;
+//	height: auto;
+//	}		
 }
 .site-main .comment-navigation,
 .site-main .paging-navigation,
@@ -689,6 +748,25 @@ a:active {
 	clear: both;
 	margin: 0 0 1.5em;
 }
+//.hentry.type-piece {
+//	display: inline-block;	
+//}
+//.hentry.type-piece .entry-content { wonky css to mess with piece archive page
+//	display: inline-block;	
+//}
+//
+//.entry.type-piece {
+//	display: inline;
+//}	
+
+.post-type-archive .type-piece {
+	display: inline-block;
+	margin: 0;
+//	height: 175px;
+//	width: 175px;
+	//padding: 400;
+	//height: 500px;
+}
 
 /*--------------------------------------------------------------
 10.2 Asides
@@ -744,21 +822,27 @@ object {
 .wp-caption {
 //	margin: 0;
 	font-size: 0.9em;
-	//line-height: 1.4em;
+	//height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */	
 	color: #aaa;
+	background-color: purple;
 }
 .wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin: 0 auto;
+//	display: block;
+//	margin: 0 auto;
+//	max-width: 100%;
+	background-color: orange;
 }
 .wp-caption-text {
 	text-align: center;
 }
 .wp-caption .wp-caption-text {
-	clear: both;
+//	clear: both;
 	display: block;
 	margin: 0.8075em auto;	
+//	max-width: 100%;	
 	text-transform: uppercase;	
+	background-color: orange;	
 }
 
 
@@ -803,3 +887,34 @@ object {
 .gallery-caption {
 	display: none; // getting rid of gallery captions for now.
 }
+
+/*--------------------------------------------------------------
+13 Side Bar
+--------------------------------------------------------------*/
+#primary {
+	float: left;
+	background-color: brown;
+	width: 80%;	
+}
+#secondary {
+//	display: inline-block;	
+	float: right;
+	background-color: yellow;
+	width: 20%;
+}
+#secondary ul,
+#secondary li {
+//	padding-left:0;
+	list-style: none;
+	margin-left: 0;
+}
+
+@media screen and (max-width: 600px) {
+	#primary {
+		width: 100%;
+	}
+	#secondary {
+		display: none;
+	}
+}
+
