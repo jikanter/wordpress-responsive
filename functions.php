@@ -344,10 +344,10 @@ function boomshaka_create_post_types() {
 						'supports' => array('title', 'editor', 'author',
 						                    'exerpt', 'trackbacks', 'custom-fields',
 											'revisions', 'page-attributes', 'page-formats'),
-						'taxonomies' => array('category', 'post_tag', 'gallery'),
+						'taxonomies' => array('category', 'post_tag', 'gallery', 'series'),
 	));
 	// register the gallery taxonomy for piece. This needs to be associated with a gallery
 	// some time later because there will be too many pieces to make this hierarchical
-	register_taxonomy('gallery', 'piece', 
-		array('label' => __('Galleries')));
+	register_taxonomy('gallery', 'piece',  array('label' => __('Galleries')));
+  register_taxonomy('series',  'piece',  array('label' => __('Series')));
 }
