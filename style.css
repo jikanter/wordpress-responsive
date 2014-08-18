@@ -330,6 +330,7 @@ hr {
     border: 0;
     border-bottom: 1px dashed #ccc;
     background: #999;
+	//width: 50%;
 }
 ul, ol {
 	margin: 0 0 1.5em 3em;
@@ -377,6 +378,13 @@ textarea {
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
 }
+//select {
+//	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+//	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+//	-moz-box-sizing:    content-box;
+//	box-sizing:         content-box;
+// DS: added select styles to below
+//}
 button,
 input[type="button"],
 input[type="reset"],
@@ -470,15 +478,15 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: red;
+	color: CornflowerBlue;
 }
 a:visited {
-	color: purple;
+	color: CornflowerBlue;
 }
 a:hover,
 a:focus,
 a:active {
-	color: black;
+	color: DarkBlue;
 }
 
 /*--------------------------------------------------------------
@@ -824,14 +832,14 @@ object {
 	font-size: 0.9em;
 	//height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */	
-	color: #aaa;
-	background-color: purple;
+	color: #aaa; // DS: Visually I think this should be lighter than body text
+	//background-color: purple;
 }
 .wp-caption img[class*="wp-image-"] {
 //	display: block;
 //	margin: 0 auto;
 //	max-width: 100%;
-	background-color: orange;
+//	background-color: orange;
 }
 .wp-caption-text {
 	text-align: center;
@@ -839,10 +847,10 @@ object {
 .wp-caption .wp-caption-text {
 //	clear: both;
 	display: block;
-	margin: 0.8075em auto;	
+	margin: 0.5em auto;	
 //	max-width: 100%;	
 	text-transform: uppercase;	
-	background-color: orange;	
+//	background-color: orange;	
 }
 
 
@@ -889,18 +897,20 @@ object {
 }
 
 /*--------------------------------------------------------------
-13 Side Bar
+13 Side Bar - Slight woocomerce mod for #container
 --------------------------------------------------------------*/
-#primary {
-	float: left;
-	background-color: brown;
+#primary, #container {	
+	float: left; 
+	//padding-right: 10px;
+	//background-color: brown;
 	width: 80%;	
 }
 #secondary {
 //	display: inline-block;	
 	float: right;
-	background-color: yellow;
-	width: 20%;
+	//padding-left: 10px;
+	//background-color: yellow;
+	width: 18%; //this solves the problem of the hr element butting up to the sidebar
 }
 #secondary ul,
 #secondary li {
@@ -918,3 +928,19 @@ object {
 	}
 }
 
+
+/*--------------------------------------------------------------
+13 WooCommerce
+--------------------------------------------------------------*/
+.woocommerce .woocommerce-error, .woocommerce .woocommerce-info, .woocommerce .woocommerce-message, .woocommerce-page .woocommerce-error, .woocommerce-page .woocommerce-info, .woocommerce-page .woocommerce-message {
+	//font-size: 3em;
+	color: inherit;
+}
+
+.woocommerce .woocommerce-error:before, .woocommerce .woocommerce-info:before, .woocommerce .woocommerce-message:before, .woocommerce-page .woocommerce-error:before, .woocommerce-page .woocommerce-info:before, .woocommerce-page .woocommerce-message:before {
+	height: auto;
+}
+
+.woocommerce #content input.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page #content input.button, .woocommerce-page #respond input#submit, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button {
+	font-weight: normal;
+}
