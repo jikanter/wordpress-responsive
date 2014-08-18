@@ -21,6 +21,8 @@ if ( ! function_exists( 'boomshaka_setup' ) ) :
  * as indicating support for post thumbnails.
  *
  * DS: ^ Does this apply to us?
+ * JK: Yes, typically we run at the init hook, because that is where we can hack post types
+ * 
  */
 function boomshaka_setup() {
 
@@ -43,6 +45,7 @@ function boomshaka_setup() {
 	//add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
+  // Note: We are not using this anywhere, we default to the wordpress machinary.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'boomshaka' ),
 	) );
@@ -327,21 +330,28 @@ function boomshaka_create_post_types() {
 					   					   'exerpt', 'trackbacks', 'custom-fields', 
 										   'revisions', 'page-attributes', 'page-formats'),
 						'taxonomies' => array('category', 'series')
-		
 	));
 	// register the series taxonomy for gallery
 	register_taxonomy('series', 'gallery');
 	register_post_type('piece', array(
 					   'labels' => array(
-							'name' => __('Pieces'),
-							'singular_name' => __('Piece'),
-							'add_new' => __('Create') ),
+							'name' => __('Pieces', 'post type general name', 'boomshaka'),
+							'singular_name' => __('Piece', 'post type singular name', 'boomshaka'),
+							'add_new' => __('Create', 'boomshaka' ),
+              'add_new_item' => __('Create a Piece', 'boomshaka' ),
+              'edit_item' => __('Edit Piece', 'boomshaka' ),
+              'new_item'  => __('New Piece', 'boomshaka' ),
+              'view_item' => __('View Piece', 'boomshaka' ),
+              'search_items' => __('Search Pieces', 'boomshaka' ),
+              'not_found' => __('No Pieces found', 'boomshaka' ),
+              'not_found_in_trash' => __('No Pieces found in trash', 'boomshaka') ),
 						'public' => true,
 						'has_archive' => true,
 						'hierarchical' => false,
 						'show_ui' => true,
 						'show_in_menu' => true,
 						'show_in_menu_bar' => true,
+            'show_in_nav_menus' => true,
 						'menu_position' => 1,
 						'supports' => array('title', 'editor', 'author', 'thumbnail',
 						                    'exerpt', 'trackbacks', 'custom-fields',
@@ -352,4 +362,22 @@ function boomshaka_create_post_types() {
 	// some time later because there will be too many pieces to make this hierarchical
 	register_taxonomy('gallery', 'piece',  array('label' => __('Galleries')));
   register_taxonomy('series',  'piece',  array('label' => __('Series')));
+  // register post status as sold
+  
+  /* Boomshaka Commerce Section - Hooks in to WooCommerce 2.1.2 - (c) WooThemes - All rights reserved */
+  remove_action('woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+  remove_action('woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+  
+  function boomshaka_artist_sales_before_main_content() {
+    echo('<section class="site-content" id="boomshaka-artist-piece-sales">');
+  }
+  add_action('woocommerce_before_main_content', 'boomshaka_artist_sales_before_main_content', 10);
+  
+  function boomshaka_artist_sales_after_main_content() { 
+    echo('</section>');
+  }
+  add_action('woocommerce_after_main_content', 'boomshaka_artist_sales_after_main_content', 10);
+  
+  // add woocommerce theme support
+  add_theme_support('woocommerce');
 }
