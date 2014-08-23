@@ -899,34 +899,42 @@ object {
 /*--------------------------------------------------------------
 13 Side Bar - Slight woocomerce mod for #container
 --------------------------------------------------------------*/
+	
 #primary, #container {	
+	float: left; 
+	//padding-right: 10px;
+	//background-color: brown;
+	width: 100%;	
+}
+
+#primary-side, #container {	
 	float: left; 
 	//padding-right: 10px;
 	//background-color: brown;
 	width: 80%;	
 }
-#secondary {
-//	display: inline-block;	
-	float: right;
-	//padding-left: 10px;
-	//background-color: yellow;
-	width: 18%; //this solves the problem of the hr element butting up to the sidebar
-}
-#secondary ul,
-#secondary li {
-//	padding-left:0;
-	list-style: none;
-	margin-left: 0;
-}
-
-@media screen and (max-width: 600px) {
-	#primary {
-		width: 100%;
-	}
-	#secondary {
-		display: none;
-	}
-}
+//#secondary {
+////	display: inline-block;	
+//	float: right;
+//	//padding-left: 10px;
+//	//background-color: yellow;
+//	width: 18%; //this solves the problem of the hr element butting up to the sidebar
+//}
+//#secondary ul,
+//#secondary li {
+////	padding-left:0;
+//	list-style: none;
+//	margin-left: 0;
+//}
+//
+//@media screen and (max-width: 600px) {
+//	#primary {
+//		width: 100%;
+//	}
+//	#secondary {
+//		display: none;
+//	}
+//}
 
 
 /*--------------------------------------------------------------
