@@ -137,32 +137,63 @@ textarea {
 	padding: .5% 2%; 	
 	color: #8C8C8C;
 	font-family: sans-serif;
-	font-size: 16px;
+	//font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5; //DS: recommended by W3C http://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-visual-presentation
 }	
+
+//@media screen and (max-width: 40em)
+//	body {
+//		font-size: 90%;
+//	}
+//}
+
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 //.site-branding, .site-title {
 //	display: inline-block;
 //}
+
+
+#site-branding {
+	display: inline-block;	
+	margin: 0;
+	padding: 0;
+}
+.site-branding h1 {
+	display: inline-block;	
+	margin: 0;
+	padding: 0;
+	background-color: grey;
+}
 .site-branding h1 a {
 //	display: inline-block;	
 	font-size: 3em; // x3 of body text
-	line-height: 1.5;
+//	line-height: 1.5;
 	font-weight: bold;
 	word-wrap: break-word;
 	color: #404040;	
-	text-decoration: none;
-	//background-color: grey;	
+	text-decoration: none;	
+	margin: 0;
+	padding: 0;
 }
 .site-branding h1 a:hover {
 	text-decoration: none;
-	color: black;
+//	color: black;
 }
-entry-header {
-	background-color: red;
+.site-branding h2 {
+	display: inline-block;
+	vertical-align: bottom;	
+	background-color: orange;
+	margin: 0;
+	padding: 0;
+} 
+
+.blog .entry-header, 
+.archive .entry-header {
+	background-color: #EEE;
+	margin-bottom: 1em;
 }
 .entry-header h1,
 .entry-header h1 a { 
@@ -194,7 +225,13 @@ entry-header {
 p {
 	margin-bottom: 1.5em;
 	width: 75%;
+//	max-width: 600px;
 }
+
+@media screen and (max-width: 900px) {
+	p { width: 100%; }
+}
+
 p + ul,
 p + ol {
     margin-top: -1.5em;
@@ -270,16 +307,33 @@ big {
 .entry-title h1,
 .entry-title h1 a {
 	display: inline-block;
-	background-color: orange;
+
+//	background-color: orange;
 //	max-width: 50%;	
 }
-.entry-meta {
-//	max-width: 50%;
-	display: inline-block;
 
+.entry-meta {
+	display: block;
+//	float: right;
 	margin: 0;
 	padding: 0;
+	font-size: 90%;
 }
+.posted-on,
+.posted-on a,
+.posted-on a:hover,
+.byline {
+//	font-size: 75%;
+//	background-color: yellow;
+//	background: tan;
+	text-decoration: none;
+//	color: #8C8C8C;
+//	max-width: 50%;
+}
+
+.entry-meta a:hover {
+	text-decoration: none;
+}	
 
 //.hfeed-site {
 //	min-height:100%;
@@ -287,7 +341,8 @@ big {
 //}
 //.site-header {
 //	background:#ff0;
-//	padding:10px;
+//	padding:0;
+//	margin:0;
 //}	
 //.content-area {
 //	padding:10px;
@@ -315,11 +370,7 @@ big {
 //}	
 	
 	
-.posted-on,
-.byline {
-//	font-size: 75%;
-	background-color: yellow;
-}
+
 
 /*--------------------------------------------------------------
 3.0 Elements
@@ -520,7 +571,7 @@ a:active {
 .main-navigation a:hover {
 	color: black;
 //	background-color: yellow;
-//	text-decoration:underline;
+	text-decoration:underline;
 //	font-weight:bold;
 }
 
@@ -901,18 +952,44 @@ object {
 --------------------------------------------------------------*/
 	
 #primary, #container {	
-	float: left; 
+	//float: left; 
 	//padding-right: 10px;
 	//background-color: brown;
+	display: inline-block;
 	width: 100%;	
 }
 
-#primary-side, #container {	
-	float: left; 
-	//padding-right: 10px;
-	//background-color: brown;
-	width: 80%;	
+//#primary-side, #container {	
+//	float: left; 
+//	//padding-right: 10px;
+//	//background-color: brown;
+//	width: 80%;	
+//}
+
+#secondary {
+	display: inline-block;
+	background-color: lavender;
+	width: 100%;
+	padding: 1em;
+	margin-bottom: 1em;
 }
+
+#secondary ul,
+#secondary li {
+//	padding-left:0;
+	list-style: none;
+	margin-left: 0;
+}
+
+#secondary .widget {
+	display: inline-block;
+	//padding: 0 1em 0 0;
+	margin: 0 1em 0 0;
+	vertical-align: top;
+	max-width: 18em;
+//	background-color: blanchedalmond;
+}
+	
 //#secondary {
 ////	display: inline-block;	
 //	float: right;
@@ -920,11 +997,6 @@ object {
 //	//background-color: yellow;
 //	width: 18%; //this solves the problem of the hr element butting up to the sidebar
 //}
-//#secondary ul,
-//#secondary li {
-////	padding-left:0;
-//	list-style: none;
-//	margin-left: 0;
 //}
 //
 //@media screen and (max-width: 600px) {
