@@ -640,8 +640,9 @@ a:active {
 	.main-navigation li {
 	display: block;
 	margin: 1px;
+	padding: .5em;
 	width: 100%;
-	//background-color: #E5E5E5;
+	background-color: #E5E5E5;
 	}
 	
 //	.post-type-archive .type-piece {
@@ -974,6 +975,11 @@ object {
 	margin-bottom: 1em;
 }
 
+
+#secondary h1 {
+	font-weight: bold;
+}
+
 #secondary ul,
 #secondary li {
 //	padding-left:0;
@@ -981,10 +987,12 @@ object {
 	margin-left: 0;
 }
 
+
+
 #secondary .widget {
 	display: inline-block;
 	//padding: 0 1em 0 0;
-	margin: 0 1em 0 0;
+	margin: 0 2em 0 0;
 	vertical-align: top;
 	max-width: 18em;
 //	background-color: blanchedalmond;
