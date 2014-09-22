@@ -71,6 +71,7 @@ function boomshaka_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+  
 }
 endif; // boomshaka_setup
 add_action( 'after_setup_theme', 'boomshaka_setup' );
@@ -381,3 +382,4 @@ function boomshaka_create_post_types() {
   // add woocommerce theme support
   add_theme_support('woocommerce');
 }
+
