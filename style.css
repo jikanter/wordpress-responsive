@@ -234,7 +234,7 @@ p {
 //	max-width: 600px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
 	p { width: 100%; }
 }
 
@@ -249,6 +249,11 @@ p + ol {
 //.entry-content p {
 //	max-width: 600px; //DS: This fucks up all the big imagges DAMNN
 //}	
+
+//.attachment {
+//	height: 100%;
+//}
+
 
 b, strong {
 	font-weight: bold;
@@ -814,6 +819,7 @@ a:active {
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
 //.hentry.type-piece {
 //	display: inline-block;	
 //}
@@ -1037,4 +1043,16 @@ object {
 
 .woocommerce #content input.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page #content input.button, .woocommerce-page #respond input#submit, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button {
 	font-weight: normal;
+}
+
+
+
+/*--------------------------------------------------------------
+13 attachment page focused
+--------------------------------------------------------------*/
+
+.entry-attachment img,
+.woocommerce #content div.product div.images img, .woocommerce div.product div.images img, .woocommerce-page #content div.product div.images img, .woocommerce-page div.product div.images img {
+	max-height: 75%; // This is special catch for vertical type images
+	width: auto;
 }
