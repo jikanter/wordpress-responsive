@@ -11,7 +11,7 @@
   </head><!-- .entry-header -->
   
   <div class="entry-content">
-    <?php the_content() ?>
+    <?php show_payment_form() ?>
     <?php
     wp_link_pages(array(
       'before' => '<div class="page-links">' . __( 'Pages:', 'boomshaka' ),
@@ -22,4 +22,4 @@
 	<footer class="entry-footer">
 		<?php edit_post_link( __( 'Edit', 'boomshaka' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
-</article>
+</article><!-- #post-## -->
