@@ -71,6 +71,7 @@ function boomshaka_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+  
 }
 endif; // boomshaka_setup
 add_action( 'after_setup_theme', 'boomshaka_setup' );
@@ -211,6 +212,21 @@ function boomshaka_filter_wp_title( $title )
 	return $title . esc_attr( get_bloginfo( 'name' ) );
 }
 
+add_action( 'init', 'boomshaka_payment_init' );
+function boomshaka_payment_init() {
+  
+  $body_classes = get_body_class();
+  
+  for ($i = 0; $i < sizeof($body_classes); $i++) {
+    if ($body_classes[$i] == 'boomshaka-payment') {
+      require_once(dirname(__FILE__) . '/inc/payment.php');
+    }
+  }
+}
+
+function show_payment_form() { 
+  return $boomshaka_payment->form;
+}
 
 
 
@@ -242,9 +258,9 @@ function boomshaka_init()
 		// If we are in piece_purchase initialize the ecommerce machinery
 		if (is_category('piece_purchase')) { /* boomshaka_store_init(); */}
 		// are we in customize.php, because we do nothing then as well.
-		if (is_admin() && (strcasecmp(__FILE__, 'customize.php') != -1)) { 
+		/*if (is_admin() && (strcasecmp(__FILE__, 'customize.php') != -1)) { 
 			// we are in the artist customization section, do nothing.
-		}
+		}*/
 	
 	}
 	// otherwise do nothing, and use the regular blog machinary
@@ -381,3 +397,4 @@ function boomshaka_create_post_types() {
   // add woocommerce theme support
   add_theme_support('woocommerce');
 }
+
