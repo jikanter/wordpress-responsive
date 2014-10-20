@@ -230,7 +230,7 @@ header {
 	
 p {
 	margin-bottom: 1.5em;
-	width: 75%;
+	width: 70%;
 //	max-width: 600px;
 }
 
@@ -241,6 +241,7 @@ p {
 p + ul,
 p + ol {
     margin-top: -1.5em;
+    width: 70%; // changed 10/19 to fix list width overflows. do i need to add @media screen quiery?
 }
 
 .singular-page p {
@@ -1142,5 +1143,17 @@ object {
 .entry-attachment img,
 .woocommerce #content div.product div.images img, .woocommerce div.product div.images img, .woocommerce-page #content div.product div.images img, .woocommerce-page div.product div.images img {
 	max-height: 75%; // This is special catch for vertical type images
-	width: auto;
+	width: auto!; // Added IMPORTANT 10/19 to try to fix vertical image problem
+}
+
+
+
+/*--------------------------------------------------------------
+13 Abstract Collage specific
+--------------------------------------------------------------*/
+
+
+#post-4 .entry-title
+{
+   display:none; // This should hide the title on the specified front page
 }
