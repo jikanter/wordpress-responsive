@@ -11,8 +11,10 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		
 		<div class="site-info">
-			<?php printf( __( 'WordPress x %1$s = %2$s.', 'boomshaka' ), 'boomshaka', '<a href="http://github.com/jikanter/wordpress-responsive" rel="designer">Boomshakalaka</a>' ); ?>
+		<p>Copyright &copy; <?php echo date("Y") ?> <?php bloginfo( 'name' ); ?>. <?php bloginfo( 'description' ); ?>. </p>
+			<?php printf( __( 'WordPress x %1$s = %2$s.', 'boomshaka' ), 'boomshaka', '<a href="http://boomshaka.starschreck.com/signup" rel="designer">Boomshakalaka</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
