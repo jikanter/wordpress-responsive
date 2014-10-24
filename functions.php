@@ -278,9 +278,21 @@ function boomshaka_artist_customization_init() {
 	// append to the body class the boomshaka customize. 
 	$body_class .= ' boomshaka';
 	if (!$boomshaka_scripts_loaded) { 
-		// enqueue the customizer
+		wp_enque_script("/wp-content/themes/boomshaka/scripts/customize.js");
 		
 	}
+}
+
+/* returns true if the custom boomshaka category is loaded, false otherwise */
+function boomshaka_category_loaded_p() { 
+  $body_classes = get_body_classes();
+  $loadedp = false;
+  for ($i = 0; $i < sizeof($body_classes); $i++) {
+    if ($body_classes[$i] == "boomshaka") { 
+      $loadedp = true;
+    } 
+  }
+  return $loadedp;
 }
 
 
