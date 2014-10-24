@@ -361,7 +361,7 @@ big {
 //	padding-bottom:60px;   /* Height of the footer */
 //}
 .site-footer {
-	background-color:#6cf;	
+	background-color:#9bbaca; //previous: #6cf;	
 	color: white;
 	padding: 1em;
 }
@@ -370,7 +370,7 @@ big {
 .site-info a:hover, 
 .site-info a:visited, 
 .site-info a:active {
-	color: yellow;
+	color: white;
 }
 		
 //.site-footer {
@@ -530,20 +530,11 @@ textarea {
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
 }
-//select {
-//	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
-//	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-//	-moz-box-sizing:    content-box;
-//	box-sizing:         content-box;
-// DS: added select styles to below
-//}
+
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"],
-input[type="submit"] wpcf7-submit,
-input[type="submit"] wpcf7-form-control { // ADDED FOR CONTACT FORM 7 STYLING TO MATCH BOOMSHAKA STYLING. may need to add addtl classes
-	border: 1px solid;
+input[type="submit"] { 	border: 1px solid;
 	border-color: #ccc #ccc #bbb; 
 	border-radius: 3px;
 	background: #e6e6e6;
@@ -677,8 +668,6 @@ a:active {
 	text-decoration:underline;
 //	font-weight:bold;
 }
-
-
 
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -1023,6 +1012,7 @@ object {
 	text-align: center;
 	vertical-align: top;
 	width: 100%;
+	padding: 5px; // this fixes gallery items getting squished together on resize
 }
 .gallery-columns-2 .gallery-item {
 	max-width: 50%;
@@ -1057,19 +1047,10 @@ object {
 --------------------------------------------------------------*/
 	
 #primary, #container {	
-	//float: left; 
-	//padding-right: 10px;
-	//background-color: brown;
 	display: inline-block;
 	width: 100%;	
 }
 
-//#primary-side, #container {	
-//	float: left; 
-//	//padding-right: 10px;
-//	//background-color: brown;
-//	width: 80%;	
-//}
 
 #secondary {
 	display: inline-block;
@@ -1086,7 +1067,6 @@ object {
 
 #secondary ul,
 #secondary li {
-//	padding-left:0;
 	list-style: none;
 	margin-left: 0;
 }
@@ -1095,31 +1075,11 @@ object {
 
 #secondary .widget {
 	display: inline-block;
-	//padding: 0 1em 0 0;
 	margin: 0 2em 0 0;
 	vertical-align: top;
 	max-width: 18em;
-//	background-color: blanchedalmond;
 }
 	
-//#secondary {
-////	display: inline-block;	
-//	float: right;
-//	//padding-left: 10px;
-//	//background-color: yellow;
-//	width: 18%; //this solves the problem of the hr element butting up to the sidebar
-//}
-//}
-//
-//@media screen and (max-width: 600px) {
-//	#primary {
-//		width: 100%;
-//	}
-//	#secondary {
-//		display: none;
-//	}
-//}
-
 
 /*--------------------------------------------------------------
 13 WooCommerce
