@@ -1128,7 +1128,7 @@ width: auto;
 14 Override wonky woocomerce image css
 --------------------------------------------------------------*/
 
-.woocommerce div.product div.images,.woocommerce-page div.product div.images,.woocommerce #content div.product div.images,.woocommerce-page #content div.product div.images{width:auto;}
+//.woocommerce div.product div.images,.woocommerce-page div.product div.images,.woocommerce #content div.product div.images,.woocommerce-page #content div.product div.images{width:auto;}
 
 .woocommerce .related ul.products li.product img,.woocommerce-page .related ul.products li.product img,.woocommerce .upsells.products ul.products li.product img,.woocommerce-page .upsells.products ul.products li.product img,.woocommerce .related ul li.product img,.woocommerce-page .related ul li.product img,.woocommerce .upsells.products ul li.product img,.woocommerce-page .upsells.products ul li.product img{width:auto;height:auto;margin-right:10px;}
 
