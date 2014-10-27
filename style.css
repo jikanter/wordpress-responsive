@@ -416,7 +416,7 @@ dd {
 	margin: 0 1.5em 1.5em;
 }
 img {
-	height: auto; /* Make sure images are scaled correctly. */
+	height: auto; /* Make sure images are scaled correctly. */ 
 	max-width: 100%; /* Adhere to container width. */
 }
 figure {
@@ -772,7 +772,7 @@ a:active {
 
 .nav-previous a,
 .nav-next a {
-	background-color: aquamarine;
+	background-color: #9bbaca;
 }
 
 /*--------------------------------------------------------------
@@ -1011,7 +1011,7 @@ object {
 	display: inline-block;
 	text-align: center;
 	vertical-align: top;
-	width: 100%;
+//	width: 100%; 
 	padding: 5px; // this fixes gallery items getting squished together on resize
 }
 .gallery-columns-2 .gallery-item {
@@ -1105,11 +1105,13 @@ object {
 
 .entry-attachment img,
 .woocommerce #content div.product div.images img, .woocommerce div.product div.images img, .woocommerce-page #content div.product div.images img, .woocommerce-page div.product div.images img {
-	max-height: 75%; // This is special catch for vertical type images
-	width: auto!; // Added IMPORTANT 10/19 to try to fix vertical image problem
+//	max-height: 75%; // This is special catch for vertical type images
+//	width: auto!; // Added IMPORTANT 10/19 to try to fix vertical image problem. DIDN"T WORK
 }
 
-
+.woocommerce #content div.product div.images img, .woocommerce div.product div.images img, .woocommerce-page #content div.product div.images img, .woocommerce-page div.product div.images img {
+width: auto;
+}
 
 /*--------------------------------------------------------------
 13 Abstract Collage specific
