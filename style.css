@@ -1133,4 +1133,5 @@ https://wordpress.org/support/topic/woocommerce-product-images-blurry-and-not-fi
 
 .woocommerce .related ul.products li.product img,.woocommerce-page .related ul.products li.product img,.woocommerce .upsells.products ul.products li.product img,.woocommerce-page .upsells.products ul.products li.product img,.woocommerce .related ul li.product img,.woocommerce-page .related ul li.product img,.woocommerce .upsells.products ul li.product img,.woocommerce-page .upsells.products ul li.product img{width:auto;height:auto;margin-right:10px;}
 
-.woocommerce ul.products li.product,.woocommerce-page ul.products li.product{width:auto;}
+.woocommerce ul.products li.product,.woocommerce-page ul.products li.product, 
+.woocommerce ul.products li.product a img, .woocommerce-page ul.products li.product a img {width:initial;}
