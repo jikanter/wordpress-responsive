@@ -643,7 +643,7 @@ a:active {
 	display: block;
 	float: left;
 	width: 100%;
-	margin: 0 0 1.5em 0; // here is the spacing between the menu and the content
+	margin: 0 0 1.5em 0; /* here is the spacing between the menu and the content */
 }
 .main-navigation ul {
 	list-style: none;
@@ -657,8 +657,8 @@ a:active {
 	padding: .0 .8em 0 0;	
 }
 .main-navigation a {
-	font-size: 1em;
-	font-weight: 200;
+	font-size: 1.25em;
+	font-weight: 200; 
 	color: #404040;
 	text-decoration: none;
 }
@@ -735,6 +735,10 @@ a:active {
 	padding: .5em;
 	width: 100%;
 	background-color: #E5E5E5;
+	}
+	
+	.site-branding h1 a {	
+	font-size: 2em; // SMALLER FOR PHONE PURPOSES
 	}
 	
 //	.post-type-archive .type-piece {
@@ -1123,6 +1127,10 @@ width: auto;
    display:none; // This should hide the title on the specified front page
 }
 
+#post-4 .widget-area
+{
+   display:none; // This should hide the widget area on the specified front page
+}
 
 /*--------------------------------------------------------------
 14 Override wonky woocomerce image css that blurrs thumbnails 
@@ -1133,5 +1141,5 @@ https://wordpress.org/support/topic/woocommerce-product-images-blurry-and-not-fi
 
 .woocommerce .related ul.products li.product img,.woocommerce-page .related ul.products li.product img,.woocommerce .upsells.products ul.products li.product img,.woocommerce-page .upsells.products ul.products li.product img,.woocommerce .related ul li.product img,.woocommerce-page .related ul li.product img,.woocommerce .upsells.products ul li.product img,.woocommerce-page .upsells.products ul li.product img{width:auto;height:auto;margin-right:10px;}
 
-.woocommerce ul.products li.product,.woocommerce-page ul.products li.product, 
-.woocommerce ul.products li.product a img, .woocommerce-page ul.products li.product a img {width:initial;}
+//.woocommerce ul.products li.product,.woocommerce-page ul.products li.product, 
+//.woocommerce ul.products li.product a img, .woocommerce-page ul.products li.product a img {width:initial;} // fixes inconsistent width 100% problems on the "shop" page. trying to fix this with a different method because it doesn't look the greatest on phone
