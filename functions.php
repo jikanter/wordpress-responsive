@@ -21,7 +21,8 @@ if ( ! function_exists( 'boomshaka_setup' ) ) :
  * as indicating support for post thumbnails.
  *
  * DS: ^ Does this apply to us?
- * JK: Yes, typically we run at the init hook, because that is where we can hack post types
+ * JK: Yes, typically we run at the init hook, because that is where we can hack post types.
+ * We want to be able to set post thumbnails if necessary
  * 
  */
 function boomshaka_setup() {
@@ -143,7 +144,24 @@ function artist_site_generate() {
 	// return the js widgets that comprise the javascript component of the site
 	// this at the beginning a write-only interface with wordpress, so the functions supported should be simple, 
 	// and abstracted enough to support wordpress updates with minimal intervention.
+  global $boomshaka_category;
+  global $boomshaka_site;
+  global $wpdb;
+  global $boomdb;
+  if (is_multisite()) { 
+    if (!wp_is_large_network()) { 
+      $boomshaka_site = $wpdb->get_results("SELECT site_id FROM wp_options where blog_id = ".get_blog_id(), OBJECT);
+    }
+    else { 
+      $boomshaka_site = $boomdb->get_results("SELECT site_id from wp_sites where blog_id =".get_blog_id(), OBJECT);
+    }
+  }
+  else { 
+    $boomshaka_site = 0;
+  }
 }
+add_action('init', 'artist_site_generate' );
+
 
 function artist_interface_init() { 
 	// initialize the simple interface. Tee off the site generation if 
@@ -156,6 +174,7 @@ function artist_interface_init() {
 	// if $boomshaka_category is not defined, do nothing. we will read back the interface directly from wordpress 
 	// and transform interface using js.
 }
+add_action('init', 'artist_interface_init');
 
 function boomshaka_custom_pings( $comment )
 {
@@ -322,13 +341,13 @@ function boomshaka_comments_number( $count )
 	}
 }
 
-// TODO: build custom post types for archive, gallery, piece
+// TODO: build custom post types for work-archive, gallery, piece (don't change this to archive, it screws up wordpress)
 add_action('init', 'boomshaka_create_post_types' );
 function boomshaka_create_post_types() {
-	register_post_type( 'archive', array( 
+	register_post_type( 'work-archive', array( 
 						'labels' => array(
-							'name' => __( 'Archives' ),
-							'singular_name' => __( 'Archive' ),
+							'name' => __( 'Work Archives' ),
+							'singular_name' => __( 'Work Archive' ),
 							'add_new' => __('Build'), ),
 						'public' => false,
 						'has_archive' => true,
@@ -337,7 +356,7 @@ function boomshaka_create_post_types() {
 						'show_ui' => true,
 						'show_in_menu' => true,
 						'show_in_menu_bar' => true,
-						'menu_position' => 3					
+						'menu_position' => 3,				
 	));
 	register_post_type('gallery', array( 
 					   'labels' => array(
@@ -353,7 +372,7 @@ function boomshaka_create_post_types() {
 					   'show_in_menu' => true,
 					   'show_in_menu_bar' => true,
 					   'menu_position' => 2,
-					   'parents' => 'archive',
+					   'parents' => 'work-archive',
 					   'supports' => array('title', 'editor', 'author', 
 					   					   'exerpt', 'trackbacks', 'custom-fields', 
 										   'revisions', 'page-attributes', 'page-formats'),
