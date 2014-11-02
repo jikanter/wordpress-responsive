@@ -416,7 +416,7 @@ dd {
 	margin: 0 1.5em 1.5em;
 }
 img {
-	height: auto; /* Make sure images are scaled correctly. */
+	height: auto; /* Make sure images are scaled correctly. */ 
 	max-width: 100%; /* Adhere to container width. */
 }
 figure {
@@ -643,7 +643,7 @@ a:active {
 	display: block;
 	float: left;
 	width: 100%;
-	margin: 0 0 1.5em 0; // here is the spacing between the menu and the content
+	margin: 0 0 1.5em 0; /* here is the spacing between the menu and the content */
 }
 .main-navigation ul {
 	list-style: none;
@@ -657,8 +657,8 @@ a:active {
 	padding: .0 .8em 0 0;	
 }
 .main-navigation a {
-	font-size: 1em;
-	font-weight: 200;
+	font-size: 1.25em;
+	font-weight: 200; 
 	color: #404040;
 	text-decoration: none;
 }
@@ -737,6 +737,10 @@ a:active {
 	background-color: #E5E5E5;
 	}
 	
+	.site-branding h1 a {	
+	font-size: 2em; // SMALLER FOR PHONE PURPOSES
+	}
+	
 //	.post-type-archive .type-piece {
 //	display: block;
 //	width: 100%;
@@ -772,7 +776,7 @@ a:active {
 
 .nav-previous a,
 .nav-next a {
-	background-color: aquamarine;
+	background-color: #9bbaca;
 }
 
 /*--------------------------------------------------------------
@@ -1011,7 +1015,7 @@ object {
 	display: inline-block;
 	text-align: center;
 	vertical-align: top;
-	width: 100%;
+//	width: 100%; 
 	padding: 5px; // this fixes gallery items getting squished together on resize
 }
 .gallery-columns-2 .gallery-item {
@@ -1105,11 +1109,13 @@ object {
 
 .entry-attachment img,
 .woocommerce #content div.product div.images img, .woocommerce div.product div.images img, .woocommerce-page #content div.product div.images img, .woocommerce-page div.product div.images img {
-	max-height: 75%; // This is special catch for vertical type images
-	width: auto!; // Added IMPORTANT 10/19 to try to fix vertical image problem
+//	max-height: 75%; // This is special catch for vertical type images
+//	width: auto!; // Added IMPORTANT 10/19 to try to fix vertical image problem. DIDN"T WORK
 }
 
-
+.woocommerce #content div.product div.images img, .woocommerce div.product div.images img, .woocommerce-page #content div.product div.images img, .woocommerce-page div.product div.images img {
+width: auto;
+}
 
 /*--------------------------------------------------------------
 13 Abstract Collage specific
@@ -1120,3 +1126,20 @@ object {
 {
    display:none; // This should hide the title on the specified front page
 }
+
+#post-4 .widget-area
+{
+   display:none; // This should hide the widget area on the specified front page
+}
+
+/*--------------------------------------------------------------
+14 Override wonky woocomerce image css that blurrs thumbnails 
+https://wordpress.org/support/topic/woocommerce-product-images-blurry-and-not-fitting
+--------------------------------------------------------------*/
+
+//.woocommerce div.product div.images,.woocommerce-page div.product div.images,.woocommerce #content div.product div.images,.woocommerce-page #content div.product div.images{width:auto;} // this actually affects product pages which we don't want. the vertical responsive plugin handles this just fine.
+
+.woocommerce .related ul.products li.product img,.woocommerce-page .related ul.products li.product img,.woocommerce .upsells.products ul.products li.product img,.woocommerce-page .upsells.products ul.products li.product img,.woocommerce .related ul li.product img,.woocommerce-page .related ul li.product img,.woocommerce .upsells.products ul li.product img,.woocommerce-page .upsells.products ul li.product img{width:auto;height:auto;margin-right:10px;}
+
+//.woocommerce ul.products li.product,.woocommerce-page ul.products li.product, 
+//.woocommerce ul.products li.product a img, .woocommerce-page ul.products li.product a img {width:initial;} // fixes inconsistent width 100% problems on the "shop" page. trying to fix this with a different method because it doesn't look the greatest on phone
