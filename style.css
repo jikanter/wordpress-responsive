@@ -42,6 +42,9 @@ and Blueprint http://www.blueprintcss.org/
 12.0 - Media
 	12.1 - Captions
 	12.2 - Galleries
+13 - Widget Footer Area 	
+14 - WooCommerce Images
+15 - Abstract Collage specific
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -93,10 +96,7 @@ nav,
 section {
 	display: block;
 }
-header {
-//	margin: 0 0 1.5em 0; // this 1 line space between title and menu
-//	background-color: red;
-}
+header {}
 ol, ul {
 	list-style: none;
 }
@@ -137,27 +137,15 @@ textarea {
 	padding: .5% 2%; 	
 	color: #8C8C8C;
 	font-family: sans-serif;
-	//font-size: 16px;
 	font-size: 1.6rem;
-	line-height: 1.5; //DS: recommended by W3C http://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-visual-presentation
+	line-height: 1.5; /* recommended by W3C http://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-visual-presentation */
 }	
-
-//@media screen and (max-width: 40em)
-//	body {
-//		font-size: 90%;
-//	}
-//}
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
-//.site-branding, .site-title {
-//	display: inline-block;
-//}
 
-header {
-	//background-color: aliceblue;
-}
+header {}
 
 #site-branding {
 	display: inline-block;	
@@ -168,12 +156,9 @@ header {
 	display: inline-block;	
 	margin: 0;
 	padding: 0;
-//	background-color: grey;
 }
 .site-branding h1 a {
-//	display: inline-block;	
-	font-size: 3em; // x3 of body text
-//	line-height: 1.5;
+	font-size: 3em; /* x3 of body text */
 	font-weight: bold;
 	word-wrap: break-word;
 	color: #404040;	
@@ -183,22 +168,13 @@ header {
 }
 .site-branding h1 a:hover {
 	text-decoration: none;
-//	color: black;
 }
-.site-branding h2 {
-//	display: inline-block;
-//	vertical-align: bottom;	
-//	background-color: orange;
-//	margin: 0;
-//	padding: 0;
-//	font-family: sans-serif;
-} 
-
-
+.site-branding h2 {} 
 
 .blog .entry-header, 
 .archive .entry-header {
 	background-color: #EEE;
+	width: 70%;	/* Styling, for better readability on desktops */
 	margin-bottom: 1em;
 }
 .entry-header h1,
@@ -211,50 +187,28 @@ header {
 	color: #404040;	
 	text-decoration: none;
 	clear: none;
-	//background-color: grey;
 }
-
-//h2.boom-head {
-//	display: inline-block;
-//	clear: none;
-//}
-
-//.entry-title h1 { // Thought this would fix a weird spacing issue under header h1, it doesn't tho
-//	margin: 0;
-//	padding: 0;
-//}	 
-//.entry-meta {  
-//	margin: 0;
-//	padding: 0;
-//}	
 	
 p {
 	margin-bottom: 1.5em;
-	width: 70%;
-//	max-width: 600px;
+	width: 70%; /* Styling, for better readability on desktops */
 }
 
 @media screen and (max-width: 1000px) {
-	p { width: 100%; }
+	p { width: 100%; } 
+	.blog .entry-header, 
+	.archive .entry-header { width: 100%; }
 }
 
 p + ul,
 p + ol {
     margin-top: -1.5em;
-    width: 70%; // changed 10/19 to fix list width overflows. do i need to add @media screen quiery?
+    width: 70%; /* changed 10/19 to fix list width overflows. do i need to add @media screen quiery? */ 
 }
 
 .singular-page p {
 	width: 100%;	
 }	
-//.entry-content p {
-//	max-width: 600px; //DS: This fucks up all the big imagges DAMNN
-//}	
-
-//.attachment {
-//	height: 100%;
-//}
-
 
 b, strong {
 	font-weight: bold;
@@ -282,11 +236,6 @@ pre {
 code, kbd, tt, var {
 	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
-//.comments-area,
-//.form-allowed-tags,
-//.form-allowed-tags code {
-//	font-size: 1em;	// this styles the allowed html message under the comment box
-//}
 abbr, acronym {
 	border-bottom: 1px dotted #666;
 	cursor: help;
@@ -319,14 +268,10 @@ big {
 .entry-title h1,
 .entry-title h1 a {
 	display: inline-block;
-
-//	background-color: orange;
-//	max-width: 50%;	
 }
 
 .entry-meta {
 	display: block;
-//	float: right;
 	margin: 0;
 	padding: 0;
 	font-size: 90%;
@@ -335,31 +280,12 @@ big {
 .posted-on a,
 .posted-on a:hover,
 .byline {
-//	font-size: 75%;
-//	background-color: yellow;
-//	background: tan;
 	text-decoration: none;
-//	color: #8C8C8C;
-//	max-width: 50%;
 }
 
 .entry-meta a:hover {
 	text-decoration: none;
 }	
-
-//.hfeed-site {
-//	min-height:100%;
-//   	position:relative;	
-//}
-//.site-header {
-//	background:#ff0;
-//	padding:0;
-//	margin:0;
-//}	
-//.content-area {
-//	padding:10px;
-//	padding-bottom:60px;   /* Height of the footer */
-//}
 .site-footer {
 	background-color:#9bbaca; //previous: #6cf;	
 	color: white;
@@ -372,17 +298,6 @@ big {
 .site-info a:active {
 	color: white;
 }
-		
-//.site-footer {
-//	position:absolute;
-//	bottom:0;
-//	width:100%;
-//	height:60px;   /* Height of the footer */
-//	background:#6cf;	
-//}	
-	
-	
-
 
 /*--------------------------------------------------------------
 3.0 Elements
@@ -393,8 +308,18 @@ hr {
     border: 0;
     border-bottom: 1px dashed #ccc;
     background: #999;
-	//width: 50%;
 }
+
+.blog hr, 
+.archive hr {
+	width: 70%; /* Styling, for better readability on desktops */
+}
+
+@media screen and (max-width: 1000px) {
+	.blog hr, 
+	.archive hr { width: 100%; }
+}
+
 ul, ol {
 	margin: 0 0 1.5em 3em;
 }
@@ -429,94 +354,6 @@ table {
 th {
 	font-weight: bold;
 }
-
-
-
-/*--------------------------------------------------------------
-3.999 Contact Form 7 BS - COMMENTED OUT MOMENTARILY TO TRY USING OTHER CONTACT FORM PLUG-INS 10/10/14
-
-
-
-
-div.wpcf7 {
-	margin: 0;
-	padding: 0;
-}
-
-div.wpcf7-response-output {
-	margin: 2em 0.5em 1em;
-	padding: 0.2em 1em;
-}
-
-div.wpcf7 .screen-reader-response {
-	position: absolute;
-	overflow: hidden;
-	clip: rect(1px, 1px, 1px, 1px);
-	height: 1px;
-	width: 1px;
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-
-div.wpcf7-mail-sent-ok {
-	border: 2px solid #398f14;
-}
-
-div.wpcf7-mail-sent-ng {
-	border: 2px solid #ff0000;
-}
-
-div.wpcf7-spam-blocked {
-	border: 2px solid #ffa500;
-}
-
-div.wpcf7-validation-errors {
-	border: 2px solid #f7e700;
-}
-
-span.wpcf7-form-control-wrap {
-	position: relative;
-}
-
-span.wpcf7-not-valid-tip {
-	color: #f00;
-	font-size: 1em;
-	display: block;
-}
-
-.use-floating-validation-tip span.wpcf7-not-valid-tip { 
-	position: absolute;
-	top: 20%;
-	left: 20%;
-	z-index: 100;
-	border: 1px solid #ff0000;
-	background: #fff;
-	padding: .2em .8em;
-}
-
-span.wpcf7-list-item {
-	margin-left: 0.5em;
-}
-
-.wpcf7-display-none {
-	display: none;
-}
-
-div.wpcf7 img.ajax-loader {
-	border: none;
-	vertical-align: middle;
-	margin-left: 4px;
-}
-
-div.wpcf7 div.ajax-error {
-	display: none;
-}
-
-div.wpcf7 .placeheld {
-	color: #888;
-}
---------------------------------------------------------------*/
 
 
 /*--------------------------------------------------------------
@@ -664,9 +501,7 @@ a:active {
 }
 .main-navigation a:hover {
 	color: black;
-//	background-color: yellow;
 	text-decoration:underline;
-//	font-weight:bold;
 }
 
 .main-navigation ul ul {
@@ -701,19 +536,16 @@ a:active {
 .main-navigation .current_page_item a,
 .main-navigation .current-menu-item a {
 }
-/* Small menu */
 
+/* Small menu */
 .menu-toggle {
 	display: none;
 	width: 100%;
 	height: 50px;
 	margin: 10px auto 15px auto;
 	font-size: 18px;
-	//line-height: 47px;
 	letter-spacing: 1px;
 	text-align: center;
-	//color: #eee;
-	//background: #111;
 	cursor: pointer;
 	background-color: transparent;
 	background-image: none;
@@ -738,19 +570,8 @@ a:active {
 	}
 	
 	.site-branding h1 a {	
-	font-size: 2em; // SMALLER FOR PHONE PURPOSES
-	}
-	
-//	.post-type-archive .type-piece {
-//	display: block;
-//	width: 100%;
-//	height: auto;
-//	}
-//	img[class*="archive-image"] {
-//	display: block;
-//	width: 100%;
-//	height: auto;
-//	}		
+	font-size: 2em; /* To fight against title wrapping on Phones  */
+	}		
 }
 .site-main .comment-navigation,
 .site-main .paging-navigation,
@@ -776,7 +597,8 @@ a:active {
 
 .nav-previous a,
 .nav-next a {
-	background-color: #9bbaca;
+	background-color: CornflowerBlue;
+	color: white;
 }
 
 /*--------------------------------------------------------------
@@ -897,32 +719,14 @@ a:active {
 }
 .page-content,
 .entry-content,
-.entry-summary {
-//	margin: 5em 0 0 0;
-}
+.entry-summary {}
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
 }
-
-//.hentry.type-piece {
-//	display: inline-block;	
-//}
-//.hentry.type-piece .entry-content { wonky css to mess with piece archive page
-//	display: inline-block;	
-//}
-//
-//.entry.type-piece {
-//	display: inline;
-//}	
-
 .post-type-archive .type-piece {
 	display: inline-block;
 	margin: 0;
-//	height: 175px;
-//	width: 175px;
-	//padding: 400;
-	//height: 500px;
 }
 
 /*--------------------------------------------------------------
@@ -977,29 +781,19 @@ object {
 12.1 Captions
 --------------------------------------------------------------*/
 .wp-caption {
-//	margin: 0;
 	font-size: 0.9em;
-	//height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */	
-	color: #aaa; // DS: Visually I think this should be lighter than body text
-	//background-color: purple;
+	color: #aaa; /* Visually should be lighter than the body text. */	
 }
 .wp-caption img[class*="wp-image-"] {
-//	display: block;
-//	margin: 0 auto;
-//	max-width: 100%;
-//	background-color: orange;
 }
 .wp-caption-text {
 	text-align: center;
 }
 .wp-caption .wp-caption-text {
-//	clear: both;
 	display: block;
-	margin: 0.5em auto;	
-//	max-width: 100%;	
+	margin: 0.5em auto;		
 	text-transform: uppercase;	
-//	background-color: orange;	
 }
 
 
@@ -1015,8 +809,7 @@ object {
 	display: inline-block;
 	text-align: center;
 	vertical-align: top;
-//	width: 100%; 
-	padding: 5px; // this fixes gallery items getting squished together on resize
+	padding: 5px; /* this makes sure there is always white space between gallery images. */	
 }
 .gallery-columns-2 .gallery-item {
 	max-width: 50%;
@@ -1043,19 +836,17 @@ object {
 	max-width: 11.11%;
 }
 .gallery-caption {
-	display: none; // getting rid of gallery captions for now.
+	display: none; /* For a cleaner look: no gallery captions. */	
 }
 
 /*--------------------------------------------------------------
-13 Side Bar - Slight woocomerce mod for #container
+13 Widget Footer Area 
 --------------------------------------------------------------*/
 	
 #primary, #container {	
-	display: inline-block;
+	display: inline-block; /* Slight woocomerce mod for #container */	
 	width: 100%;	
 }
-
-
 #secondary {
 	display: inline-block;
 	background-color: lavender;
@@ -1063,20 +854,14 @@ object {
 	padding: 1em;
 	margin-bottom: 1em;
 }
-
-
 #secondary h1 {
 	font-weight: bold;
 }
-
 #secondary ul,
 #secondary li {
 	list-style: none;
 	margin-left: 0;
 }
-
-
-
 #secondary .widget {
 	display: inline-block;
 	margin: 0 2em 0 0;
@@ -1086,60 +871,29 @@ object {
 	
 
 /*--------------------------------------------------------------
-13 WooCommerce
+14 WooCommerce Images
 --------------------------------------------------------------*/
 .woocommerce .woocommerce-error, .woocommerce .woocommerce-info, .woocommerce .woocommerce-message, .woocommerce-page .woocommerce-error, .woocommerce-page .woocommerce-info, .woocommerce-page .woocommerce-message {
-	//font-size: 3em;
 	color: inherit;
 }
-
 .woocommerce .woocommerce-error:before, .woocommerce .woocommerce-info:before, .woocommerce .woocommerce-message:before, .woocommerce-page .woocommerce-error:before, .woocommerce-page .woocommerce-info:before, .woocommerce-page .woocommerce-message:before {
 	height: auto;
 }
-
 .woocommerce #content input.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page #content input.button, .woocommerce-page #respond input#submit, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button {
 	font-weight: normal;
 }
-
-
-
-/*--------------------------------------------------------------
-13 attachment page focused
---------------------------------------------------------------*/
-
-.entry-attachment img,
-.woocommerce #content div.product div.images img, .woocommerce div.product div.images img, .woocommerce-page #content div.product div.images img, .woocommerce-page div.product div.images img {
-//	max-height: 75%; // This is special catch for vertical type images
-//	width: auto!; // Added IMPORTANT 10/19 to try to fix vertical image problem. DIDN"T WORK
-}
-
 .woocommerce #content div.product div.images img, .woocommerce div.product div.images img, .woocommerce-page #content div.product div.images img, .woocommerce-page div.product div.images img {
 width: auto;
 }
+.woocommerce .related ul.products li.product img,.woocommerce-page .related ul.products li.product img,.woocommerce .upsells.products ul.products li.product img,.woocommerce-page .upsells.products ul.products li.product img,.woocommerce .related ul li.product img,.woocommerce-page .related ul li.product img,.woocommerce .upsells.products ul li.product img,.woocommerce-page .upsells.products ul li.product img{width:auto;height:auto;margin-right:10px;} /* A found fix for WooCommerce ultraspecific CSS for images */	
+
 
 /*--------------------------------------------------------------
-13 Abstract Collage specific
+15 Abstract Collage specific
 --------------------------------------------------------------*/
 
 
 #post-4 .entry-title
 {
-   display:none; // This should hide the title on the specified front page
+   display:none; /* For main page: Hide page title in body text */
 }
-
-#post-4 .widget-area
-{
-   display:none; // This should hide the widget area on the specified front page
-}
-
-/*--------------------------------------------------------------
-14 Override wonky woocomerce image css that blurrs thumbnails 
-https://wordpress.org/support/topic/woocommerce-product-images-blurry-and-not-fitting
---------------------------------------------------------------*/
-
-//.woocommerce div.product div.images,.woocommerce-page div.product div.images,.woocommerce #content div.product div.images,.woocommerce-page #content div.product div.images{width:auto;} // this actually affects product pages which we don't want. the vertical responsive plugin handles this just fine.
-
-.woocommerce .related ul.products li.product img,.woocommerce-page .related ul.products li.product img,.woocommerce .upsells.products ul.products li.product img,.woocommerce-page .upsells.products ul.products li.product img,.woocommerce .related ul li.product img,.woocommerce-page .related ul li.product img,.woocommerce .upsells.products ul li.product img,.woocommerce-page .upsells.products ul li.product img{width:auto;height:auto;margin-right:10px;}
-
-//.woocommerce ul.products li.product,.woocommerce-page ul.products li.product, 
-//.woocommerce ul.products li.product a img, .woocommerce-page ul.products li.product a img {width:initial;} // fixes inconsistent width 100% problems on the "shop" page. trying to fix this with a different method because it doesn't look the greatest on phone
