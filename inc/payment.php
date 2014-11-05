@@ -3,6 +3,7 @@ class Boom_Payment_Gateway {
   
   function __construct() { 
     // TODO: add correct payment ID for PAYPAL submission
+    $this->paymentMethod = "paypal";
     $this->form = '<form id="boomshaka-payment-form" method=\"POST\" type=\"application/x-www-form-urlencoded\" action=\"https://paypal.com/paypal">'
       ."<label for=\"boom-payment-firstname\">First Name</label>"
       ."<input id=\"boom-payment-firstname\" name=\"boom-payment-firstname\" type=\"text\" />" 

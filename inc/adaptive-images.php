@@ -8,7 +8,7 @@
    Twitter:   @responsiveimg
 
    LEGAL:
-   Adaptive Images by Matt Wilcox is licensed under a Creative Commons Attribution 3.0 Unported License.
+   Adaptive Images by Matt Wilcox is licensed under a Creativ e Commons Attribution 3.0 Unported License.
 
 /* CONFIG ----------------------------------------------------------------------------------------------------------- */
 
