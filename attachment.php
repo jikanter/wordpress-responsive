@@ -1,5 +1,19 @@
 <?php
 /**
+ * 
+ * Clicking attachment image proceeds to next image
+ * http://pixert.com/blog/wordpress-click-an-attachment-image-to-view-next-image-in-order/
+ */
+// code copied from adjacent_image_link() in wp-include/media.php
+$attachments = array_values(get_children( array('post_parent' => $post->post_parent, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'orderby' => 'menu_order ID') ));
+foreach ( $attachments as $k => $attachment )
+  if ( $attachment->ID == $post->ID )
+    break;
+
+$next_url =  isset($attachments[$k+1]) ? get_permalink($attachments[$k+1]->ID) : get_permalink($attachments[0]->ID);
+?>
+<?php
+/**
  * Cloned from first boomshaka theme
  * only problem here is that the VERTICAL IMAGES fit horizontally.
  * this only works on vertical phone orientation. when the screen is WIDER than it is high, images run down off screen.
@@ -30,8 +44,11 @@
 </header>
 <section class="entry-content">
 <div class="entry-attachment">
+
+
 <?php if ( wp_attachment_is_image( $post->ID ) ) : $att_image = wp_get_attachment_image_src( $post->ID, "full-size" ); ?>
-<p class="attachment"><a href="<?php echo wp_get_attachment_url( $post->ID ); ?>" title="<?php the_title(); ?>" rel="attachment"><img src="<?php echo $att_image[0]; ?>" " class="attachment-full-size" alt="<?php $post->post_excerpt; ?>" /></a></p>
+<p class="attachment"><a href="<?php echo $next_url; ?>"><?php echo wp_get_attachment_image( $post->ID, $size='fullsize' ); ?></a></p>
+
 <?php else : ?>
 //<a href="<?php echo wp_get_attachment_url( $post->ID ); ?>" title="<?php echo esc_html( get_the_title( $post->ID ), 1 ); ?>" rel="attachment"><?php echo basename( $post->guid ); ?></a>
 <?php endif; ?>
