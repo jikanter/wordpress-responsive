@@ -85,12 +85,10 @@ get_header(); ?>
         <article class="entry-content type-piece">
             <?php $attr = array(
                 'class' => "archive-image",
-                //'alt' => trim( strip_tags( $wp_postmeta->_wp_attachment_image_alt ) ),
             ); ?>
             <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 			
             <a href="<?php echo $url; ?>"><?php the_post_thumbnail( 'thumbnail', $attr ); ?></a>
-            <!-- <h2 class="piece-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2> -->
             <section>
               <!--  <?php the_content(); ?> -->
             </section>
