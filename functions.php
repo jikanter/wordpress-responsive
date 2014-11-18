@@ -115,8 +115,6 @@ function boomshaka_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
   
- 
- 
   // boomshaka materials 
   wp_enqueue_script( 'boomshaka-carousel' , get_template_directory_uri() . '/js/boomshaka-carousel.js', array(), '20141117', true);
 	
