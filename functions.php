@@ -99,15 +99,26 @@ add_action( 'widgets_init', 'boomshaka_widgets_init' );
  * Enqueue scripts and styles.
  */
 function boomshaka_scripts() {
+  
+  // boomshaka class setup script
+  wp_enqueue_script( 'boomshaka', get_template_directory_uri() . '/js/boomshaka.js', array(), '20141117', true );
+  
 	wp_enqueue_style( 'boomshaka-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'boomshaka-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+  
+  
 
 	wp_enqueue_script( 'boomshaka-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+  
+ 
+ 
+  // boomshaka materials 
+  wp_enqueue_script( 'boomshaka-carousel' , get_template_directory_uri() . '/js/boomshaka-carousel.js', array(), '20141117', true);
 	
 }
 add_action( 'wp_enqueue_scripts', 'boomshaka_scripts' );
@@ -148,6 +159,7 @@ function artist_site_generate() {
   global $boomshaka_site;
   global $wpdb;
   global $boomdb;
+  if (!(isset($boomshaka_category))) { $boomshaka_category = "artist"; }
   if (is_multisite()) { 
     if (!wp_is_large_network()) { 
       $boomshaka_site = $wpdb->get_results("SELECT site_id FROM wp_options where blog_id = ".get_blog_id(), OBJECT);
@@ -168,7 +180,8 @@ function artist_interface_init() {
 	// $boomshaka_category is undefined. 
 	// Note: This will be called by artist site front end
 	global $boomshaka_category;
-	if (!$boomshaka_category) { 
+	if (!isset($boomshaka_category)) {
+    $boomshaka_category = "artist"; 
 		artist_site_generate();
 	}
 	// if $boomshaka_category is not defined, do nothing. we will read back the interface directly from wordpress 
