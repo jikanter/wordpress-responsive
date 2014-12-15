@@ -1,7 +1,19 @@
 // make sure boomshaka is loaded
 if ((typeof Boomshaka == "undefined") || (BoomShaka == null)) { 
 	var Boomshaka = {
-	  createPiece: function() { 
+	  createKioskView: function() { 
+	    var BoomShakaWidgetContainer = document.createElement("div");
+	    var BoomShakaInitializeKioskViewButton = document.createElement("button");
+	    BoomShakaInitializeDisplayViewButton.value = "Click to begin Kiosk View with your archive of pieces";
+	    BoomShakaInitializeDisplayViewButton.onClick = function() { 
+	      var screenWidth = screen.width;
+	      var screenHeight = screen.height;
+	      window.open("/wp-content/themes/boomshaka/inc/kiosk", "kiosk", 
+	      "width="+screenWidth+","+"height="+screenHeight+",status=no,resizable=no,fullscreen=yes");
+	    };
+	    return false;
+	  },
+	  createPieceView: function() { 
 	    var BoomShakaCustomizerContainer = document.createElement("li");
 	    BoomShakaCustomizerContainer.setAttribute("class", "control-section accordion-section top");
 	    BoomShakaCustomizerContainer.setAttribute("id", "accordion-section-title_boomshaka");
@@ -45,7 +57,7 @@ if ((typeof Boomshaka == "undefined") || (BoomShaka == null)) {
   		return BoomShakaCustomizerContainer;
 	  },
 	  init: function(){
-	    return BoomShaka.createPiece();
+	    return BoomShaka.createPieceView();
 	  },
 	  _initializeFromDOM: function(domTree) { 
 	    // internal method, used to tail recurse out of initializeFromDOM
