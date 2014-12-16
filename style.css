@@ -299,6 +299,15 @@ big {
 	color: white;
 }
 
+::selection {
+	background:	#8DA5ED; /* WebKit/Blink Browsers. value is a tint of "royalblue" from http://www.w3schools.com/tags/ref_colorpicker.asp?colorhex=%234169E1 */
+	color: #E6E6E6; /* value is a tint of "white" from http://www.w3schools.com/tags/ref_colorpicker.asp?colorhex=%234169E1 */
+}
+::-moz-selection {
+	background:	#8DA5ED; /* Gecko Browsers */
+	color: #E6E6E6;
+}
+
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/
@@ -353,6 +362,13 @@ table {
 }
 th {
 	font-weight: bold;
+}
+
+#square {
+	width: 1em;
+	height: 1em;
+	background: white;
+	align: right; 
 }
 
 
@@ -598,8 +614,24 @@ a:active {
 .nav-previous a,
 .nav-next a {
 	background-color: CornflowerBlue;
+	padding: 1em;
 	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
 }
+
+.nav-previous a:hover,
+.nav-next a:hover {
+	background-color: #A2BFF4;	
+}
+
+.nav-previous a:active,
+.nav-next a:active.
+.nav-previous a:focus,
+.nav-next a:focus {
+	background-color: #BED2F7;	/* value is a tint of "cornflowerblue" from http://www.w3schools.com/tags/ref_colorpicker.asp?colorhex=%234169E1 */
+}		
+
 
 /*--------------------------------------------------------------
 6.0 Accessibility
@@ -716,6 +748,9 @@ a:active {
 .single .byline,
 .group-blog .byline {
 	display: inline;
+}
+.single .entry-header {
+	margin-bottom: 1em;
 }
 .page-content,
 .entry-content,
