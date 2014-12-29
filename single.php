@@ -11,7 +11,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
-
+			<div id="square"></div>
 			<?php get_template_part( 'content', 'single' ); ?>
 
 			<?php boomshaka_post_nav(); ?>

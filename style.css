@@ -172,11 +172,16 @@ header {}
 .site-branding h2 {} 
 
 .blog .entry-header, 
-.archive .entry-header {
+.archive .entry-header,
+.post .entry-header {
 	background-color: #EEE;
 	width: 70%;	/* Styling, for better readability on desktops */
 	margin-bottom: 1em;
 }
+.post .entry-header {
+	background-color: #f3f3f3;
+}
+
 .entry-header h1,
 .entry-header h1 a { 
 	display: inline;
@@ -558,7 +563,7 @@ a:active {
 	display: none;
 	width: 75%;
 	height: 2.5em;
-	margin: 1em auto 1em auto;
+	margin: .5em auto .5em auto;
 	font-size: 1em;
 	letter-spacing: 1px;
 	text-align: center;
@@ -566,6 +571,7 @@ a:active {
 	background-color: white;
 	background-image: none;
 	background-repeat: no-repeat;
+	box-shadow: none;
 }
 @media screen and (max-width: 600px) {
 	.menu-toggle,
@@ -577,22 +583,28 @@ a:active {
 		display: none;
 	}
 
-	.main-navigation li {
+	.main-navigation li,
+	.main-navigation li a {
 	display: block;
 	text-align: center;	
 	margin: 1px;
-	padding: .5em;
+	padding: .25em;
 	width: 100%;
 	background-color: #E5E5E5;
 	}
+		
 	
 	.site-branding {
 	text-align: center;
 	}	
 	
 	.site-branding h1 a {	
-	font-size: 2em; /* To fight against title wrapping on Phones  */
+	font-size: 2.5em; /* To fight against title wrapping on Phones  */
 	}		
+	
+	.site-footer {
+	font-size:.8em;
+	}
 }
 .site-main .comment-navigation,
 .site-main .paging-navigation,
