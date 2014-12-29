@@ -202,7 +202,8 @@ p {
 @media screen and (max-width: 1000px) {
 	p { width: 100%; } 
 	.blog .entry-header, 
-	.archive .entry-header { width: 100%; }
+	.archive .entry-header,
+	.post .entry-header { width: 100%; } /* This needs to match whatever individual styling for entry-header */
 }
 
 p + ul,
