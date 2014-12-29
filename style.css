@@ -599,7 +599,7 @@ a:active {
 	}	
 	
 	.site-branding h1 a {	
-	font-size: 2.5em; /* To fight against title wrapping on Phones  */
+	font-size: 2em; /* To fight against title wrapping on Phones  */
 	}		
 	
 	.site-footer {
