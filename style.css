@@ -293,7 +293,7 @@ big {
 	text-decoration: none;
 }	
 .site-footer {
-	background-color:#9bbaca; //previous: #6cf;	
+	background-color: #9bbaca; /* previous: #6cf; */	
 	color: white;
 	padding: 1em;
 }
@@ -617,7 +617,10 @@ a:active {
 .paging-navigation .nav-previous,
 .post-navigation .nav-previous {
 	float: left;
+	white-space: nowrap;
 	width: 50%;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	font-weight: 200;
 }
 .comment-navigation .nav-next,
@@ -625,7 +628,10 @@ a:active {
 .post-navigation .nav-next {
 	float: right;
 	text-align: right;
+	white-space: nowrap;
 	width: 50%;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	font-weight: 200;	
 }
 
