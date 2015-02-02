@@ -175,7 +175,7 @@ header {}
 .archive .entry-header,
 .post .entry-header {
 	background-color: #EEE;
-	width: 70%;	/* Styling, for better readability on desktops */
+//	width: 70%;	/* Styling, for better readability on desktops */
 	margin-bottom: 1em;
 }
 .post .entry-header {
@@ -194,10 +194,10 @@ header {}
 	clear: none;
 }
 	
-p {
-	margin-bottom: 1.5em;
-	width: 70%; /* Styling, for better readability on desktops */
-}
+//p {
+//	margin-bottom: 1.5em;
+//	width: 70%; /* Styling, for better readability on desktops */
+//}
 
 @media screen and (max-width: 1000px) {
 	p { width: 100%; } 
@@ -208,7 +208,6 @@ p {
 
 p + ul,
 p + ol {
-    margin-top: -1.5em;
     width: 70%; /* changed 10/19 to fix list width overflows. do i need to add @media screen quiery? */ 
 }
 
@@ -337,6 +336,8 @@ hr {
 
 ul, ol {
 	margin: 0 0 1.5em 3em;
+	list-style-position: inside;
+	background: red;
 }
 ul {
 	list-style: disc;
@@ -346,8 +347,10 @@ ol {
 }
 li > ul,
 li > ol {
-	margin-bottom: 0;
-	margin-left: 1.5em;
+	//margin-bottom: 0;
+	//margin-left: 1.5em;
+	background: blue;
+	display: inline;
 }
 dt {
 	font-weight: bold;
