@@ -206,11 +206,6 @@ header {}
 	.post .entry-header { width: 100%; } /* This needs to match whatever individual styling for entry-header */
 }
 
-p + ul,
-p + ol {
-    width: 70%; /* changed 10/19 to fix list width overflows. do i need to add @media screen quiery? */ 
-}
-
 .singular-page p {
 	width: 100%;	
 }	
@@ -337,7 +332,6 @@ hr {
 ul, ol {
 	margin: 0 0 1.5em 3em;
 	list-style-position: inside;
-	background: red;
 }
 ul {
 	list-style: disc;
