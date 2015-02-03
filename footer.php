@@ -12,7 +12,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 		<p>Copyright&nbsp;&copy;&nbsp;<?php echo date("Y") ?>&nbsp;<?php bloginfo( 'name' ); ?>. <?php bloginfo( 'description' ); ?>.</p>
-		Artist Websites by <a href="http://boomshaka.starschreck.com/signup">Boomshaka</a>. Show&nbsp;your&nbsp;work&nbsp;to&nbsp;the&nbsp;world.
+		Artist Websites by <a href="http://boomshaka.starschreck.com/signup">Boomshaka</a> v1.01. Show&nbsp;your&nbsp;work&nbsp;to&nbsp;the&nbsp;world.
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
