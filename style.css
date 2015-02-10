@@ -199,11 +199,26 @@ header {}
 //	width: 70%; /* Styling, for better readability on desktops */
 //}
 
+p {
+	margin-bottom: 1.5em;
+}
+
+p+ul {
+	margin-bottom: 0;
+}
+
+.blog #main {
+	width: 50%;
+}
+
 @media screen and (max-width: 1000px) {
 	p { width: 100%; } 
 	.blog .entry-header, 
 	.archive .entry-header,
 	.post .entry-header { width: 100%; } /* This needs to match whatever individual styling for entry-header */
+	.blog #main { width: 100%; }
+}
+
 }
 
 .singular-page p {
