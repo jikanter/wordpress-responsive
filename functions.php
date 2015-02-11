@@ -451,3 +451,9 @@ function wc_remove_related_products( $args ) {
 	return array();
 }
 add_filter('woocommerce_related_products_args','wc_remove_related_products', 10); 
+
+/* 
+ * takes off unattractive SALE badge for anything marked on sale
+ * https://wordimpress.com/how-to-remove-product-sales-flash-in-woocommerce/
+ */
+remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash' , 10);
