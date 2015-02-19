@@ -457,3 +457,9 @@ add_filter('woocommerce_related_products_args','wc_remove_related_products', 10)
  * https://wordimpress.com/how-to-remove-product-sales-flash-in-woocommerce/
  */
 remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash' , 10);
+
+add_filter( 'woocommerce_enqueue_styles', '__return_false');
+/* 
+ * testing striping woocomerce custom colors
+ */
+add_filter( 'woocommerce_show_page_title', function() { return false; } );
